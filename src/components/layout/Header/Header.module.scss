@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 64px;
+    margin-top: 10px;
+    display: flex;
+  }
+  .logo2 {
+    margin-top: 4px;
+    // width: 64px;
+  }
+
+  .items {
+    display: none;
+    justify-content: space-between;
+    width: 550px;
+
+    & div {
+      padding: 30px 20px 15px 20px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    & div:hover {
+      color: rgb(219, 145, 7);
+    }
+    .active {
+      background-color: orange;
+      color: black;
+      transition: all 0.7s;
+    }
+  }
+
+  .last-child-wrapper {
+    display: flex;
+
+    margin-top: 16px;
+
+    .burger-wrapper {
+      margin-left: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      cursor: pointer;
+
+      .burger {
+        margin-top: 3px;
+        width: 32px;
+        border-bottom: 2px solid black;
+        margin-bottom: 5px;
+
+        &:first-child {
+          width: 24px;
+        }
+
+        &:last-child {
+          width: 14px;
+        }
+      }
+      .close {
+        &:first-child {
+          transform: rotateX(45deg);
+        }
+
+        &:nth-child(2) {
+        }
+        &:last-child {
+          width: 14px;
+        }
+      }
+    }
+  }
+}
+.open-items {
+  display: block;
+  margin-top: 1rem;
+  background-color: rgba(105, 105, 105, 1);
+  padding-bottom: 10px;
+
+  div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .items {
+    display: flex !important;
+  }
+  .burger-wrapper {
+    display: none !important;
+  }
+  .open-items {
+    display: none;
+  }
+}
