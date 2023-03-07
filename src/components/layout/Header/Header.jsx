@@ -1,6 +1,5 @@
-import { toHaveErrorMessage } from "@testing-library/jest-dom/dist/matchers";
 import { useState } from "react";
-
+import LightSwitch from "../../UI/LightSwitch";
 import styles from "./Header.module.scss";
 
 const enam = {
@@ -13,13 +12,13 @@ const enam = {
 
 const items = ["HOME", "GALLERY", "SHOP", "ABOUT US", "CONTACT US"];
 
-const Header = ({ toggleTheme, setTheme }) => {
+const Header = ({ toggleTheme, theme }) => {
   const [active, setActive] = useState(enam.home);
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles[theme]}`}>
         <div className={styles.logo}>RENAISSANCE HAND MADE</div>
         <div className={styles.items}>
           {items.map((item, i) => (
@@ -33,17 +32,26 @@ const Header = ({ toggleTheme, setTheme }) => {
           ))}
         </div>
         <div className={styles["last-child-wrapper"]}>
-          <div className={styles.logo2} onClick={toggleTheme}>
-            LOGO
-          </div>
-
+          <LightSwitch toggleTheme={toggleTheme} />
           <div
             onClick={() => setOpen(!open)}
             className={styles["burger-wrapper"]}
           >
-            <div className={`${styles.burger} ${open ? styles.close : ""} `} />
-            <div className={`${styles.burger} ${open ? styles.close : ""} `} />
-            <div className={`${styles.burger} ${open ? styles.close : ""} `} />
+            <div
+              className={`${styles.burger} ${
+                open ? styles.close : styles.openburger
+              } `}
+            />
+            <div
+              className={`${styles.burger} ${
+                open ? styles.close : styles.openburger
+              } `}
+            />
+            <div
+              className={`${styles.burger} ${
+                open ? styles.close : styles.openburger
+              } `}
+            />
           </div>
         </div>
       </div>

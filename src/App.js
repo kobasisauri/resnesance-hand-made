@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer/Footer";
+import IMG from "./assets/mmm.jpeg";
 
 import styles from "./App.module.scss";
 
@@ -16,12 +18,17 @@ function App() {
       "theme",
       JSON.stringify(theme === "light" ? "dark" : "light")
     );
-    console.log(theme);
   };
 
   return (
-    <div className={`${styles.app} ${styles[theme]}`}>
-      <Header toggleTheme={toggleTheme} setTheme={setTheme} />
+    <div className={styles[theme]}>
+      <div className={`${styles.app} `}>
+        <Header toggleTheme={toggleTheme} theme={theme} />
+        <img src={IMG} alt="kutui" />
+        <img src={IMG} alt="kutui" />
+        <img src={IMG} alt="kutui" />
+        <Footer />
+      </div>
     </div>
   );
 }
