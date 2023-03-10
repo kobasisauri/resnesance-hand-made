@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import LightSwitch from "../../UI/LightSwitch";
 import styles from "./Header.module.scss";
 
@@ -11,15 +12,22 @@ const enam = {
 };
 
 const items = ["HOME", "GALLERY", "SHOP", "ABOUT US", "CONTACT US"];
+const links = ["home", "gallery", "shop", "about-us", "contact-us"];
 
-const Header = ({ toggleTheme, theme }) => {
+const Header = ({ toggleTheme, theme, className }) => {
   const [active, setActive] = useState(enam.home);
   const [open, setOpen] = useState(false);
 
+  console.log();
+
   return (
     <>
-      <div className={`${styles.container} ${styles[theme]}`}>
-        <div className={styles.logo}>RENAISSANCE HAND MADE</div>
+      <div
+        className={`${styles.container} ${styles[theme]} ${styles[className]}`}
+      >
+        <div className={styles.logo}>
+          RENAISSANCE <br /> HAND MADE
+        </div>
         <div className={styles.items}>
           {items.map((item, i) => (
             <div
@@ -27,12 +35,15 @@ const Header = ({ toggleTheme, theme }) => {
               onClick={() => setActive(item)}
               className={item === active ? styles.active : ""}
             >
-              {item}
+              <Link className={styles.links} to={links[i]}>
+                {item}
+              </Link>
             </div>
           ))}
         </div>
         <div className={styles["last-child-wrapper"]}>
-          <LightSwitch toggleTheme={toggleTheme} />
+          {!className && <LightSwitch toggleTheme={toggleTheme} />}
+
           <div
             onClick={() => setOpen(!open)}
             className={styles["burger-wrapper"]}

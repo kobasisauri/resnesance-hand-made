@@ -1,7 +1,8 @@
 import React from "react";
+
 import ReactDOM from "react-dom/client";
-import "./styles/index.scss";
 import App from "./App";
+import "./styles/index.scss";
 
 import {
   createBrowserRouter,
@@ -12,9 +13,9 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
-      {/* <Route path="dashboard" element={<Dashboard />} /> */}
-    </Route>
+    <>
+      <Route path="/*" element={<App />} />
+    </>
   )
 );
 
