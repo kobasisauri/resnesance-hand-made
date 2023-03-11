@@ -26,10 +26,16 @@ function App() {
       <div className={`${styles.app}`}>
         <Routes>
           <Route path="/" element={<Navigate replace="true" to="/home" />} />
-          <Route path="/" element={<HomeLayout toggleTheme={toggleTheme} />}>
+          <Route
+            path="/"
+            element={<HomeLayout toggleTheme={toggleTheme} theme={theme} />}
+          >
             <Route path="/home" element={<Home />} />
           </Route>
-          <Route path="/" element={<InnerLayout toggleTheme={toggleTheme} />}>
+          <Route
+            path="/"
+            element={<InnerLayout toggleTheme={toggleTheme} theme={theme} />}
+          >
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/about-us" element={<AboutUs />} />

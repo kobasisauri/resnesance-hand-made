@@ -9,9 +9,38 @@
 }
 
 .light {
-  background-color: #fff;
+  background-color: #e3e3e3;
+  h1,
+  h2,
+  h6,
+  p,
+  a,
+  div {
+    color: #181717;
+  }
 }
 
 .dark {
-  background-color: #333;
+  background-color: #1f1e1e;
+  h1,
+  h2,
+  h6,
+  p,
+  a,
+  div {
+    color: #e3e3e3;
+  }
+}
+
+@font-face {
+  font-family: "Roman"; /*Can be any text*/
+  src: local("timeNewRoman"),
+    url("./assets//Fonts/Times-New-Roman/timesNewRoman.ttf") format("truetype");
+}
+h1,
+h2,
+h6,
+p,
+div {
+  font-family: "Roman";
 }

@@ -17,6 +17,7 @@ const links = ["home", "gallery", "shop", "about-us", "contact-us"];
 const Header = ({ toggleTheme, theme, className }) => {
   const [active, setActive] = useState(enam.home);
   const [open, setOpen] = useState(false);
+  console.log(theme);
 
   console.log();
 
@@ -74,7 +75,9 @@ const Header = ({ toggleTheme, theme, className }) => {
               onClick={() => setActive(item)}
               className={item === active ? styles.active : ""}
             >
-              {item}
+              <Link className={styles.links} to={links[i]}>
+                {item}
+              </Link>
             </div>
           ))}
         </div>
