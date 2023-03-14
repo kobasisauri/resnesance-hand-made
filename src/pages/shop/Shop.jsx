@@ -1,6 +1,3 @@
-import React from "react";
-import styles from "./Shop.module.scss";
-
 const Shop = () => {
   return <div>Shop</div>;
 };
