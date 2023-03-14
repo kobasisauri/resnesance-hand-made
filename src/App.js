@@ -23,29 +23,27 @@ function App() {
 
   return (
     <div className={styles[theme]}>
-      <div className={`${styles.app}`}>
-        <Routes>
-          <Route path="/" element={<Navigate replace="true" to="/home" />} />
-          <Route
-            path="/"
-            element={<HomeLayout toggleTheme={toggleTheme} theme={theme} />}
-          >
-            <Route path="/home" element={<Home />} />
-          </Route>
-          <Route
-            path="/"
-            element={<InnerLayout toggleTheme={toggleTheme} theme={theme} />}
-          >
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/contact-us" element={<ContactUs />} />
+      <Routes>
+        <Route path="/" element={<Navigate replace="true" to="/home" />} />
+        <Route
+          path="/"
+          element={<HomeLayout toggleTheme={toggleTheme} theme={theme} />}
+        >
+          <Route path="/home" element={<Home />} />
+        </Route>
+        <Route
+          path="/"
+          element={<InnerLayout toggleTheme={toggleTheme} theme={theme} />}
+        >
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
 
-            <Route path="/404" element={<Error />} />
-            <Route path="/*" element={<Navigate replace to="/404" />} />
-          </Route>
-        </Routes>
-      </div>
+          <Route path="/404" element={<Error />} />
+          <Route path="/*" element={<Navigate replace to="/404" />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
