@@ -17,9 +17,6 @@ const links = ["home", "gallery", "shop", "about-us", "contact-us"];
 const Header = ({ toggleTheme, theme, className }) => {
   const [active, setActive] = useState(enam.home);
   const [open, setOpen] = useState(false);
-  console.log(theme);
-
-  console.log();
 
   return (
     <>

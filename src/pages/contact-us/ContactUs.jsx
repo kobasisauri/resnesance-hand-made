@@ -1,34 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Fade } from "react-reveal";
+import { TextField } from "@mui/material";
+
+import Button from "@mui/material/Button";
 import styles from "./ContactUs.module.scss";
 
 const ContactUs = () => {
+  let color = JSON.parse(localStorage.getItem("theme"));
+
+  const [theme, setTheme] = useState("#181717");
+
+  useEffect(() => {
+    if (color === "light") {
+      setTheme("#181717");
+    } else if (color === "dark") {
+      setTheme("#e3e3e3");
+    }
+  }, [color]);
   return (
-    <div className={styles.container}>
-      <h2>CONTACT US</h2>
-      <div className={styles.wrapper}>
-        <div>
-          <div className={styles.items}>
-            <h5>E-MAIL</h5>
-            <p>contact@renaissancehandmade.com</p>
+    <Fade bottom>
+      <div className={styles.container}>
+        <h2>CONTACT US</h2>
+        <div className={styles.wrapper}>
+          <div className={styles["inner-wrapper"]}>
+            <div className={styles.items}>
+              <h5>E-MAIL</h5>
+              <p>contact@renaissancehandmade.com</p>
+            </div>
+
+            <div className={styles.items}>
+              <h5>RENAISSANCE HANDMADE LLC</h5>
+              <p>New York</p>
+            </div>
           </div>
 
-          <div className={styles.items}>
-            <h5>RENAISSANCE HANDMADE LLC</h5>
-            <p>New York</p>
+          <div className={styles["inner-wrapper"]}>
+            <form className={styles.form}>
+              <TextField
+                id="outlined-basic"
+                label="Name*"
+                variant="outlined"
+                sx={{
+                  width: "360px",
+                  "& .MuiOutlinedInput-root": {
+                    "& > fieldset": { borderColor: theme },
+                  },
+                }}
+              />
+              <TextField
+                id="outlined-basic"
+                label="E-Mail*"
+                variant="outlined"
+                sx={{
+                  width: "360px",
+                  "& .MuiOutlinedInput-root": {
+                    "& > fieldset": { borderColor: theme },
+                  },
+                }}
+              />
+              <TextField
+                id="outlined-multiline-static"
+                label="Message*"
+                multiline
+                rows={4}
+                sx={{
+                  width: "360px",
+                  "& .MuiOutlinedInput-root": {
+                    "& > fieldset": { borderColor: theme },
+                  },
+                }}
+              />
+
+              <Button type="submit" variant="outlined" sx={{ width: "160px" }}>
+                Submit
+              </Button>
+            </form>
           </div>
-        </div>
-
-        <div>
-          <form className={styles.form}>
-            <input type="text" name="text" placeholder="NAME*" />
-            <input type="email" name="email" placeholder="E-MAIL*" />
-            <textarea placeholder="MESSAGE*"></textarea>
-
-            <button type="submit">Submit</button>
-          </form>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 
