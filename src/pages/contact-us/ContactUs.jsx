@@ -17,6 +17,7 @@ const ContactUs = () => {
       setTheme("#e3e3e3");
     }
   }, [color]);
+
   return (
     <Fade bottom>
       <div className={styles.container}>
@@ -62,7 +63,7 @@ const ContactUs = () => {
                 id="outlined-multiline-static"
                 label="Message*"
                 multiline
-                rows={4}
+                rows={3}
                 sx={{
                   width: "360px",
                   "& .MuiOutlinedInput-root": {
@@ -71,9 +72,15 @@ const ContactUs = () => {
                 }}
               />
 
-              <Button type="submit" variant="outlined" sx={{ width: "160px" }}>
-                Submit
-              </Button>
+              <div className={styles["button-wrrapper"]}>
+                <Button
+                  type="submit"
+                  variant="outlined"
+                  sx={{ width: "250px" }}
+                >
+                  Submit
+                </Button>
+              </div>
             </form>
           </div>
         </div>

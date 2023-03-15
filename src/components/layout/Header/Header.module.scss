@@ -2,7 +2,8 @@
   position: sticky;
   top: 0;
   left: 0;
-  background-color: #e3e3e3;
+  // background-color: #e3e3e3;
+  background-color: #fff;
   z-index: 999;
   box-shadow: 0 0.0625rem 0 0 rgb(0 0 0 / 15%);
 
@@ -64,7 +65,7 @@
     }
   }
 
-  .burger-wrapper div {
+  .burger-wrapper dsiv {
     border-bottom-color: #000;
   }
 
