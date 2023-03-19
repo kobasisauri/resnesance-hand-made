@@ -8,9 +8,11 @@ const InnerLayout = ({ toggleTheme, theme }) => {
   return (
     <div className={styles.container}>
       <Header toggleTheme={toggleTheme} theme={theme} />
+
       <div className={styles.wrapper}>
         <Outlet />
       </div>
+
       <Footer />
     </div>
   );
