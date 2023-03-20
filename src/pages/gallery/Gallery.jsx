@@ -13,34 +13,34 @@ import styles from "./Gallery.module.scss";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
-import Slider from "react-slick";
+// import Slider from "react-slick";
 
 // --------------------//
 
-import { ImageGroup, Image } from "react-fullscreen-image";
-import { width } from "@mui/system";
+// import { ImageGroup, Image } from "react-fullscreen-image";
+// import { width } from "@mui/system";
 
-const images = [pic1, pic2, pic3, pic4];
+// const images = [pic1, pic2, pic3, pic4];
 
 const items = [pic1, pic2, pic3, pic4, pic1, pic2, pic3];
 
 const Gallery = () => {
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    speed: 500,
-  };
-  const settings2 = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 4,
-    speed: 500,
-  };
+  // const settings = {
+  //   className: "center",
+  //   centerMode: true,
+  //   infinite: true,
+  //   centerPadding: "60px",
+  //   slidesToShow: 3,
+  //   speed: 500,
+  // };
+  // const settings2 = {
+  //   className: "center",
+  //   centerMode: true,
+  //   infinite: true,
+  //   centerPadding: "60px",
+  //   slidesToShow: 4,
+  //   speed: 500,
+  // };
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
