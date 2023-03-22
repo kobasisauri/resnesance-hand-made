@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Route, Navigate, Routes } from "react-router-dom";
-import HomeLayout from "./components/layout/homeLayout";
+// import HomeLayout froms "./components/layout/homeLayout";
 import InnerLayout from "./components/layout/innerLayout";
 
 import { Home, AboutUs, ContactUs, Error, Gallery, Shop } from "./pages";
@@ -25,16 +25,17 @@ function App() {
     <div className={styles[theme]}>
       <Routes>
         <Route path="/" element={<Navigate replace="true" to="/home" />} />
-        <Route
+        {/* <Route
           path="/"
           element={<HomeLayout toggleTheme={toggleTheme} theme={theme} />}
         >
           <Route path="/home" element={<Home />} />
-        </Route>
+        </Route> */}
         <Route
           path="/"
           element={<InnerLayout toggleTheme={toggleTheme} theme={theme} />}
         >
+          <Route path="/home" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/about-us" element={<AboutUs />} />
