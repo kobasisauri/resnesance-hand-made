@@ -16,7 +16,7 @@ import pic4 from "assets/6.png";
 import pic5 from "assets/5.jpg";
 import styles from "./Home.module.scss";
 
-const items = [pic0, pic1, pic2, pic3, pic4, pic5];
+const items = [pic0, pic1, pic2, pic3, pic4, pic5, pic5, pic5, pic5, pic5];
 
 const Home = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -65,22 +65,23 @@ const Home = () => {
 
       <Swiper
         onSwiper={setThumbsSwiper}
+        slidesPerView={"auto"}
         loop={true}
-        spaceBetween={10}
-        slidesPerView={4}
+        spaceBetween={15}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
+        // style={{ width: "200px" }}
       >
         {items.map((item, i) => (
-          <SwiperSlide key={i}>
+          <SwiperSlide key={i} style={{ width: "220px" }}>
             <img
               src={item}
               alt="slide_image"
               style={{
                 height: "200px",
-                width: "200px",
+                width: "220px",
               }}
             />
           </SwiperSlide>
