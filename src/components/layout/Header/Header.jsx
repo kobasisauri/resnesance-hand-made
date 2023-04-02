@@ -59,7 +59,7 @@ const IOSSwitch = styled((props) => (
 
 const navs = [
   { item: "HOME", link: "home" },
-  { item: "GALLERY", link: "gallery" },
+  // { item: "GALLERY", link: "gallery" },
   { item: "SHOP", link: "shop" },
   { item: "ABOUT US", link: "about-us" },
   { item: "CONTACT US", link: "contact-us" },
