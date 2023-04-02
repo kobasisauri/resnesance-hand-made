@@ -20,8 +20,6 @@ import pic3 from "assets/3.JPG";
 import pic4 from "assets/6.png";
 import pic5 from "assets/5.jpg";
 import styles from "./Home.module.scss";
-import { hover } from "@testing-library/user-event/dist/hover";
-import { fontSize } from "@mui/system";
 
 const items = [pic0, pic1, pic2, pic3, pic4, pic5, pic5, pic5, pic5, pic5];
 
