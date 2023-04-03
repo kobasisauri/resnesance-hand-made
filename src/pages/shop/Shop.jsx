@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import mainImg from "assets/1.JPG";
 import styles from "./Shop.module.scss";
 import { data } from "data";
 
 const Shop = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={styles["shop-heading"]}>
@@ -33,16 +36,30 @@ const Shop = () => {
               key={i}
               className={`${styles.item} col-md-6 col-lg-4 col-xl-3`}
             >
-              <a href=".">
-                <img src={item.images[0] || ""} alt="item" />
+              <div
+                onClick={() =>
+                  navigate(`/shop/${item.id}`, {
+                    state: {
+                      ...item,
+                    },
+                  })
+                }
+                style={{ cursor: "pointer" }}
+              >
+                <div className={styles["image-container"]}>
+                  <img src={item.images[0] || ""} alt="item" />
+                </div>
 
                 <div className={styles["item-body"]}>
-                  <div className={styles["item-title"]}>{item.name}</div>
+                  <div className={styles["item-title"]}>
+                    {item.name}
+                    <span>{item.price ? `${item.price}$` : ""}</span>
+                  </div>
                   <div className={styles["item-description"]}>
-                    {item.tags.join(" ")}
+                    {item.tags.join(", ")}
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           ))}
         </div>

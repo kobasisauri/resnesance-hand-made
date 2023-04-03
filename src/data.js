@@ -461,6 +461,7 @@ import VEGAY_5 from "assets/shop/VEGA_Y/5.jpeg";
 
 export const data = [
   {
+    id: "1",
     name: "ANG 10",
     innerTitle: "",
     tags: ["aluminum", "brass", "G10", "mirror", "satin", "stainless steel"],
@@ -469,6 +470,7 @@ export const data = [
     images: [ANG10_1, ANG10_2, ANG10_3],
   },
   {
+    id: "2",
     name: "ANG A",
     innerTitle: "Wenge Stainless Steel",
     tags: ["mirror", "satin", "stainless steel"],
@@ -477,6 +479,7 @@ export const data = [
     images: [ANGA_1, ANGA_2],
   },
   {
+    id: "3",
     name: "ANG L",
     innerTitle: "Blue Stainless steel",
     tags: ["blue", "mirror", "stainless steel"],
@@ -485,10 +488,10 @@ export const data = [
     images: [ANGL_1, ANGL_2, ANGL_3, ANGL_4, ANGL_5],
   },
   {
+    id: "4",
     name: "ANG L KNOB",
     innerTitle:
       "Purpleheart Wenge Carbon Fiber Micarta Bubinga Stainless Steel",
-
     tags: [
       "bubinga",
       "carbon fiber",
@@ -502,6 +505,7 @@ export const data = [
     images: [ANGLKNOB_1, ANGLKNOB_2, ANGLKNOB_3],
   },
   {
+    id: "5",
     name: "ANG L MIX",
     innerTitle: "White Purpleheart Wenge Micarta Stainless Steel",
     tags: ["mirror", "purpleheart", "satin", "stainless steel", "white"],
@@ -521,6 +525,7 @@ export const data = [
     ],
   },
   {
+    id: "6",
     name: "ANG L R",
     innerTitle: "Purpleheart",
     tags: ["mirror", "purpleheart"],
@@ -529,6 +534,7 @@ export const data = [
     images: [ANGLR_1, ANGLR_2, ANGLR_3, ANGLR_4, ANGLR_5],
   },
   {
+    id: "7",
     name: "ANG LS",
     innerTitle: "Purpleheart Micarta Carbon Wenge Stainless Steel",
     tags: ["carbon fiber", "mirror", "purpleheart", "stainless steel", "wenge"],
@@ -537,6 +543,7 @@ export const data = [
     images: [ANGLS_1, ANGLS_2, ANGLS_3, ANGLS_4, ANGLS_5],
   },
   {
+    id: "8",
     name: "ARES",
     innerTitle: "Micarta Brass",
     tags: ["brass", "micarta", "satin"],
@@ -545,6 +552,7 @@ export const data = [
     images: [ARES_1, ARES_2, ARES_3, ARES_4, ARES_5],
   },
   {
+    id: "9",
     name: "ARES B",
     innerTitle: "Blue White Purpleheart Stainless Steel",
     tags: ["blue", "mirror", "purpleheart", "stain", "white"],
@@ -559,6 +567,7 @@ export const data = [
     ],
   },
   {
+    id: "10",
     name: "ARES B",
     innerTitle: "Blue Stainless Steel",
     tags: ["blue", "mirror", "stainless steel"],
@@ -567,6 +576,7 @@ export const data = [
     images: [ARESB_1, ARESB_2, ARESB_3, ARESB_4, ARESB_5],
   },
   {
+    id: "11",
     name: "ARES C",
     innerTitle: "Catalox Stainless Steel",
     tags: ["catalox", "mirror", "stainless steel"],
@@ -575,6 +585,7 @@ export const data = [
     images: [ARESC_1, ARESC_2, ARESC_3, ARESC_4, ARESC_5, ARESC_6],
   },
   {
+    id: "13",
     name: "ARES GROSS",
     innerTitle: "White Brass",
     tags: ["brass", "micarta", "satin", "white"],
@@ -594,6 +605,7 @@ export const data = [
     ],
   },
   {
+    id: "14",
     name: "ARES I",
     innerTitle: "Ice Stainless Steel",
     tags: ["ice", "mirror", "stainless steel"],
@@ -602,6 +614,7 @@ export const data = [
     images: [ARESI_1, ARESI_2, ARESI_3, ARESI_4],
   },
   {
+    id: "15",
     name: "ARES MIX",
     innerTitle: "White Wenge Catalox Black Ice Blue Brass Stainless",
     tags: [
@@ -621,6 +634,7 @@ export const data = [
     images: [ARESMIX_1, ARESMIX_2, ARESMIX_3, ARESMIX_4, ARESMIX_5],
   },
   {
+    id: "16",
     name: "ARES MW",
     innerTitle: "White Brass",
     tags: ["brass", "mirror", "stain", "white"],
@@ -629,6 +643,7 @@ export const data = [
     images: [ARESMW_1, ARESMW_2, ARESMW_3, ARESMW_4],
   },
   {
+    id: "17",
     name: "ARES W",
     innerTitle: "Wenge Stainless Steel",
     tags: ["mirror", "signature", "stainless steel", "wenge"],
@@ -637,6 +652,7 @@ export const data = [
     images: [ARESW_1, ARESW_2, ARESW_3, ARESW_4, ARESW_5, ARESW_6, ARESW_7],
   },
   {
+    id: "18",
     name: "ARES WH",
     innerTitle: "White Stainless Steel",
     tags: ["mirror", "stainless steel", "white"],
@@ -645,6 +661,7 @@ export const data = [
     images: [ARESWH_1, ARESWH_2, ARESWH_3, ARESWH_4, ARESWH_5],
   },
   {
+    id: "19",
     name: "ASSIMETRIC ART",
     innerTitle: "Walnut Ipe Stainless Steel",
     tags: ["ipe", "mirror", "walnut"],
@@ -659,6 +676,7 @@ export const data = [
     ],
   },
   {
+    id: "20",
     name: "ASSIMETRIC AW",
     innerTitle: "",
     tags: ["mirror", "signature", "stainless steel", "wenge"],
@@ -676,6 +694,7 @@ export const data = [
     ],
   },
   {
+    id: "21",
     name: "ASSIMETRIC B",
     innerTitle: "Bocote Stainless Steel",
     tags: ["bocote", "satin", "stainless steel"],
@@ -684,6 +703,7 @@ export const data = [
     images: [ASSIMETRICB_1, ASSIMETRICB_2, ASSIMETRICB_3, ASSIMETRICB_4],
   },
   {
+    id: "22",
     name: "ASSIMETRIC P",
     innerTitle: "Purpleheart stainless Steel",
     tags: ["mirror", "purpleheart", "stainless steel"],
@@ -692,6 +712,7 @@ export const data = [
     images: [ASSIMETRICP_1, ASSIMETRICP_2],
   },
   {
+    id: "23",
     name: "ASSIMETRIC W",
     innerTitle: "Wenge Stainless Steel",
     tags: ["mirror", "signature", "stainless steel", "wenge", "White"],
@@ -700,6 +721,7 @@ export const data = [
     images: [ASSIMETRICW_1, ASSIMETRICW_2, ASSIMETRICW_3],
   },
   {
+    id: "24",
     name: "ASSIMETRIC WH",
     innerTitle: "White Stainless Steel",
     tags: ["mirror", "stainless steel", "White"],
@@ -714,6 +736,7 @@ export const data = [
     ],
   },
   {
+    id: "25",
     name: "ASSIMETRIC Z",
     innerTitle: "",
     tags: ["assimetric", " stainless steel", "zebra wood"],
@@ -722,6 +745,7 @@ export const data = [
     images: [ASSIMETRICZ_1, ASSIMETRICZ_2, ASSIMETRICZ_3],
   },
   {
+    id: "26",
     name: "ASSIMETRIC ZI",
     innerTitle: "Ziricote Stainless Steel",
     tags: ["satin", "stainless steel", "ziricote"],
@@ -730,6 +754,7 @@ export const data = [
     images: [ASSIMETRICZI_1, ASSIMETRICZI_2, ASSIMETRICZI_3],
   },
   {
+    id: "27",
     name: "B FLY",
     innerTitle: "White Bronze",
     tags: ["bronze", "mirror", "white"],
@@ -738,6 +763,7 @@ export const data = [
     images: [BFLY_1, BFLY_2, BFLY_3],
   },
   {
+    id: "28",
     name: "BLUES B",
     innerTitle: "Blues Stainless Steel Brass Bronze Nickel Aluminum",
     tags: [
@@ -769,6 +795,7 @@ export const data = [
     ],
   },
   {
+    id: "29",
     name: "CLW",
     innerTitle: "Purpleheart stainless Steel",
     tags: ["mirror", "purpleheart", "stainless steel"],
@@ -777,6 +804,7 @@ export const data = [
     images: [CLW_1, CLW_2, CLW_3, CLW_4, CLW_5, CLW_6, CLW_7],
   },
   {
+    id: "30",
     name: "CRC",
     innerTitle: "Wenge Brass",
     tags: ["brass", "mirror", "wenge"],
@@ -785,6 +813,7 @@ export const data = [
     images: [CRC_1, CRC_2, CRC_3],
   },
   {
+    id: "31",
     name: "GENT",
     innerTitle: "Epoxy Stainless Steel",
     tags: ["epoxy", "stainless steel"],
@@ -793,6 +822,7 @@ export const data = [
     images: [GENT_1, GENT_2, GENT_3],
   },
   {
+    id: "32",
     name: "GROS",
     innerTitle: "Ipe Stainless Steel",
     tags: ["ipe", "mirror", "stainless steel"],
@@ -801,6 +831,7 @@ export const data = [
     images: [GROS_1],
   },
   {
+    id: "33",
     name: "HEX R",
     innerTitle: "Wenge Mahagony Stainless Steel",
     tags: ["mahagony", "mirror", "satin", "stainless steel", "wenge"],
@@ -809,6 +840,7 @@ export const data = [
     images: [HEXR_1, HEXR_2, HEXR_3, HEXR_4, HEXR_5, HEXR_6],
   },
   {
+    id: "34",
     name: "HEX WG",
     innerTitle: "White Brass",
     tags: ["brass", "mirror", "white"],
@@ -817,6 +849,7 @@ export const data = [
     images: [HEXWG_1, HEXWG_2, HEXWG_3, HEXWG_4, HEXWG_5],
   },
   {
+    id: "35",
     name: "KNOB ICE",
     innerTitle: "Cocobolo Ice Stainless Steel",
     tags: ["cocobolo", "ice", "mirror", "stainless steel"],
@@ -825,6 +858,7 @@ export const data = [
     images: [KNOBICE_1, KNOBICE_2, KNOBICE_3],
   },
   {
+    id: "36",
     name: "LANGARD BLUES",
     innerTitle: "Blues Brass",
     tags: ["blue", "brass", "mirror", "stain"],
@@ -841,6 +875,7 @@ export const data = [
     ],
   },
   {
+    id: "37",
     name: "LANGARD P",
     innerTitle: "Purpleheart Brass",
     tags: ["brass", "mirror", "purpleheart", "satin"],
@@ -849,6 +884,7 @@ export const data = [
     images: [LANGARDP_1, LANGARDP_2, LANGARDP_3, LANGARDP_4, LANGARDP_5],
   },
   {
+    id: "38",
     name: "LEGAN",
     innerTitle: "Ice",
     tags: ["ice", "mirror", "stainless steel"],
@@ -857,6 +893,7 @@ export const data = [
     images: [LEGAN_1, LEGAN_2, LEGAN_3, LEGAN_4, LEGAN_5],
   },
   {
+    id: "39",
     name: "LOOP",
     innerTitle: "Brass Wenge",
     tags: ["brass", "knob", "mirror", "signature", "wenge"],
@@ -865,6 +902,7 @@ export const data = [
     images: [LOOP_1, LOOP_2, LOOP_3, LOOP_4],
   },
   {
+    id: "40",
     name: "LV",
     innerTitle: "Brass Wenge",
     tags: ["brass", "lignum vitae", "mirror", "satin"],
@@ -873,6 +911,7 @@ export const data = [
     images: [LV_1, LV_2, LV_3],
   },
   {
+    id: "41",
     name: "M ROOM",
     innerTitle: "Brass Cocobolo",
     tags: ["brass", "cocobolo"],
@@ -881,6 +920,7 @@ export const data = [
     images: [MROOM_1, MROOM_2, MROOM_3, MROOM_4, MROOM_5, MROOM_6, MROOM_7],
   },
   {
+    id: "42",
     name: "MACASSAR",
     innerTitle: "Macassar",
     tags: ["macassar", "satin", "stainless steel"],
@@ -889,6 +929,7 @@ export const data = [
     images: [MACASSAR_1, MACASSAR_2],
   },
   {
+    id: "43",
     name: "MIX",
     innerTitle: "Mix",
     tags: ["bronze", "stainless steel"],
@@ -897,6 +938,7 @@ export const data = [
     images: [MIX_1, MIX_2, MIX_3, MIX_4, MIX_5, MIX_6, MIX_7],
   },
   {
+    id: "44",
     name: "PANO C",
     innerTitle: "Cocobolo Stainless Steel",
     tags: [
@@ -911,6 +953,7 @@ export const data = [
     images: [PANOC_1, PANOC_2, PANOC_3],
   },
   {
+    id: "45",
     name: "QUAD S",
     innerTitle: "Stainless Micarta",
     tags: ["micarta", "mirror", "stainless steel"],
@@ -919,6 +962,7 @@ export const data = [
     images: [QUADS_1, QUADS_2, QUADS_3, QUADS_4, QUADS_5],
   },
   {
+    id: "46",
     name: "QUAD WG",
     innerTitle: "White Gray Black",
     tags: [],
@@ -927,6 +971,7 @@ export const data = [
     images: [QUADWG_1, QUADWG_2, QUADWG_3, QUADWG_4, QUADWG_5],
   },
   {
+    id: "47",
     name: "RING",
     innerTitle: "Ice White",
     tags: ["aluminum", "ice", "nickel", "stainless steel", "white"],
@@ -935,6 +980,7 @@ export const data = [
     images: [RING_1, RING_2, RING_3, RING_4, RING_5, RING_6, RING_7],
   },
   {
+    id: "48",
     name: "RING B",
     innerTitle: "Wenge Ice",
     tags: ["aluminum", "nickel", "wenge"],
@@ -943,6 +989,7 @@ export const data = [
     images: [RINGB_1, RINGB_2, RINGB_3, RINGB_4, RINGB_5, RINGB_6],
   },
   {
+    id: "49",
     name: "RING BM",
     innerTitle: "Brass Micarta",
     tags: ["brass", "micarta", "mirror"],
@@ -961,6 +1008,7 @@ export const data = [
     ],
   },
   {
+    id: "50",
     name: "RING ICE",
     innerTitle: "Micarta white ice",
     tags: ["aluminum", "ice", "micarta", "mirror", "white"],
@@ -969,6 +1017,7 @@ export const data = [
     images: [RINGICE_1, RINGICE_2, RINGICE_3],
   },
   {
+    id: "51",
     name: "RING W",
     innerTitle: "Micarta White Ice Blue Black",
     tags: [
@@ -988,6 +1037,7 @@ export const data = [
     images: [RINGW_1, RINGW_2, RINGW_3, RINGW_4, RINGW_5, RINGW_6, RINGW_7],
   },
   {
+    id: "52",
     name: "RND",
     innerTitle: "Bubinga Wenge Stainless",
     tags: ["bubinga", "satin", "stainless steel", "wenge"],
@@ -996,6 +1046,7 @@ export const data = [
     images: [RND_1, RND_2, RND_3, RND_4, RND_5, RND_6],
   },
   {
+    id: "53",
     name: "ROUND R",
     innerTitle: "Cocobolo Bubinga",
     tags: ["bubinga", "cocobolo", "mirror", "satin"],
@@ -1004,6 +1055,7 @@ export const data = [
     images: [ROUNDR_1, ROUNDR_2, ROUNDR_3, ROUNDR_4, ROUNDR_5],
   },
   {
+    id: "54",
     name: "ROY",
     innerTitle: "Aluminum Micarta Bubinga",
     tags: ["aluminum", "bubinga", "micarta", "mirror", "satin"],
@@ -1012,6 +1064,7 @@ export const data = [
     images: [ROY_1, ROY_2, ROY_3, ROY_4, ROY_5, ROY_6],
   },
   {
+    id: "55",
     name: "SCR",
     innerTitle: "Aluminum Micarta Bubinga",
     tags: ["knob", "mirror", "purpleheart", "stainless steel"],
@@ -1020,6 +1073,7 @@ export const data = [
     images: [SCR_1, SCR_2, SCR_3, SCR_4, SCR_5, SCR_6, SCR_7],
   },
   {
+    id: "56",
     name: "U",
     innerTitle: "Purpleheart Redheart",
     tags: ["mirror", "purpleheart", "satin", "stainless steel"],
@@ -1028,6 +1082,7 @@ export const data = [
     images: [UPurpleheart_1, UPurpleheart_2, UPurpleheart_3, UPurpleheart_4],
   },
   {
+    id: "57",
     name: "U",
     innerTitle: "White Purpleheart",
     tags: ["mirror", "purpleheart", "white"],
@@ -1047,6 +1102,7 @@ export const data = [
     ],
   },
   {
+    id: "58",
     name: "U W",
     innerTitle: "Wenge Stainless Steel",
     tags: ["mirror", "signature", "stainless steel", "wenge"],
@@ -1055,6 +1111,7 @@ export const data = [
     images: [UW_1, UW_2, UW_3, UW_4, UW_5, UW_6, UW_7, UW_8, UW_9],
   },
   {
+    id: "59",
     name: "U R",
     innerTitle: "",
     tags: ["cocobolo", "damascus", "stainless steel"],
@@ -1063,6 +1120,7 @@ export const data = [
     images: [UR_1, UR_2, UR_3, UR_4, UR_5, UR_6, UR_7],
   },
   {
+    id: "60",
     name: "VEGA 1",
     innerTitle: "Rosewood Purpleheart Wenge Micarta",
     tags: ["micarta", "purpleheart", "rosewood", "stainless steel", "wenge"],
@@ -1071,6 +1129,7 @@ export const data = [
     images: [VEGA1_1, VEGA1_2, VEGA1_3, VEGA1_4],
   },
   {
+    id: "61",
     name: "VEGA 2",
     innerTitle: "Olive Wood",
     tags: ["olive wood", "satin", "stainless steel"],
@@ -1079,6 +1138,7 @@ export const data = [
     images: [VEGA2_1, VEGA2_2, VEGA2_3, VEGA2_4],
   },
   {
+    id: "62",
     name: "VEGA AL",
     innerTitle: "Purpleheart White Aluminum",
     tags: ["aluminum", "mirror", "purpleheart", "white"],
@@ -1087,6 +1147,7 @@ export const data = [
     images: [VEGAAL_1, VEGAAL_2, VEGAAL_3],
   },
   {
+    id: "63",
     name: "VEGA ALS",
     innerTitle: "Aluminum Stainless Steel",
     tags: ["aluminum", "satin", "stainless steel"],
@@ -1095,6 +1156,7 @@ export const data = [
     images: [VEGAALS_1, VEGAALS_2, VEGAALS_3, VEGAALS_4, VEGAALS_5],
   },
   {
+    id: "64",
     name: "VEGA B",
     innerTitle: "Bocote Macassar",
     tags: [
@@ -1116,6 +1178,7 @@ export const data = [
     ],
   },
   {
+    id: "65",
     name: "VEGA B",
     innerTitle: "Bubinga",
     tags: ["bubinga", "mirror", "satin", "stainless steel"],
@@ -1124,6 +1187,7 @@ export const data = [
     images: [VEGABBubinga_1, VEGABBubinga_2, VEGABBubinga_3],
   },
   {
+    id: "66",
     name: "VEGA BC",
     innerTitle: "Bocote",
     tags: ["bocote", "bookmatched", "satin", "stainless steel", "wine room"],
@@ -1140,6 +1204,7 @@ export const data = [
     ],
   },
   {
+    id: "67",
     name: "VEGA MG",
     innerTitle: "Wenge",
     tags: ["mirror", "satin", "signature", "stainless steel", "wenge"],
@@ -1148,6 +1213,7 @@ export const data = [
     images: [VEGAMG_1, VEGAMG_2],
   },
   {
+    id: "68",
     name: "VEGA O",
     innerTitle: "Ipe",
     tags: ["ipe", "mirror", "stainless steel"],
@@ -1156,6 +1222,7 @@ export const data = [
     images: [VEGAO_1, VEGAO_2, VEGAO_3, VEGAO_4, VEGAO_5, VEGAO_6],
   },
   {
+    id: "69",
     name: "VEGA P",
     innerTitle: "Purpleheart",
     tags: ["bocote", "walnut"],
@@ -1174,6 +1241,7 @@ export const data = [
     ],
   },
   {
+    id: "70",
     name: "VEGA R",
     innerTitle: "White Bocote",
     tags: ["mirror", "satin", "stainless steel", "wenge", "white", "wine room"],
@@ -1183,6 +1251,7 @@ export const data = [
     images: [VEGAR_1, VEGAR_2, VEGAR_3, VEGAR_4],
   },
   {
+    id: "71",
     name: "VEGA R MIX",
     innerTitle: "White Wenge Ipe",
     tags: ["ipe", "wenge", "white"],
@@ -1206,6 +1275,7 @@ export const data = [
     ],
   },
   {
+    id: "72",
     name: "VEGA W",
     innerTitle: "Wenge",
     tags: ["mirror", "satin", "signature", "stainless steel", "wenge"],
@@ -1214,6 +1284,7 @@ export const data = [
     images: [VEGAW_1, VEGAW_2, VEGAW_3],
   },
   {
+    id: "73",
     name: "VEGA Y",
     innerTitle: "Yellowheart",
     tags: ["satin", "stainless steel", "yellowheart"],
@@ -1222,6 +1293,7 @@ export const data = [
     images: [VEGAY_1, VEGAY_2, VEGAY_3, VEGAY_4, VEGAY_5],
   },
   {
+    id: "74",
     name: "VINO R",
     innerTitle: "Cocobolo",
     tags: ["cocobolo", "satin", "stainless steel", "wine room"],
@@ -1230,6 +1302,7 @@ export const data = [
     images: [VINOR_1],
   },
   {
+    id: "75",
     name: "VINO R",
     innerTitle: "Wenge",
     tags: ["satin", "signature", "wenge"],
@@ -1238,6 +1311,7 @@ export const data = [
     images: [VINORWENGE_1, VINORWENGE_2, VINORWENGE_3],
   },
   {
+    id: "76",
     name: "WEB",
     innerTitle: "",
     tags: ["aluminum", "black", "brass"],

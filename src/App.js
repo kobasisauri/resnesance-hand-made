@@ -3,7 +3,15 @@ import { Route, Navigate, Routes } from "react-router-dom";
 // import HomeLayout froms "./components/layout/homeLayout";
 import InnerLayout from "./components/layout/innerLayout";
 
-import { Home, AboutUs, ContactUs, Error, Gallery, Shop } from "./pages";
+import {
+  Home,
+  AboutUs,
+  ContactUs,
+  Error,
+  Gallery,
+  Shop,
+  ShopItem,
+} from "./pages";
 import styles from "./App.module.scss";
 
 function App() {
@@ -26,12 +34,7 @@ function App() {
     <div className={styles[theme]}>
       <Routes>
         <Route path="/" element={<Navigate replace="true" to="/home" />} />
-        {/* <Route
-          path="/"
-          element={<HomeLayout toggleTheme={toggleTheme} theme={theme} />}
-        >
-          <Route path="/home" element={<Home />} />
-        </Route> */}
+
         <Route
           path="/"
           element={<InnerLayout toggleTheme={toggleTheme} theme={theme} />}
@@ -39,6 +42,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:id" element={<ShopItem />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
 

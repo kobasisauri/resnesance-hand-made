@@ -34,6 +34,7 @@ const Home = () => {
       setTheme("#e3e3e3");
     }
   }, [color]);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -106,25 +107,12 @@ const Home = () => {
       </Swiper>
 
       <div className={styles.section2}>
-        <div
-          style={{ width: "100%", display: "flex", justifyContent: "center" }}
-        >
-          <img
-            src={Logo}
-            alt="logo"
-            style={{ height: "550px", width: "72%" }}
-          />
+        <div className={styles["logo-container"]}>
+          <img src={Logo} alt="logo" className={styles.logo} />
         </div>
-        <div style={{ width: "100%" }}>
-          <h1 style={{ textAlign: "center" }}>Renaissance Handmade</h1>
-          <p
-            style={{
-              lineHeight: "2rem",
-              fontSize: "24px",
-              marginTop: "3rem",
-              marginRight: "1rem",
-            }}
-          >
+        <div className={styles.description}>
+          <h3>Renaissance Handmade</h3>
+          <p>
             Let me introduce you my vision of hardware – mix of various
             materials and different worlds such as furniture, knives, jewelry
             making, art and passion. My goal is to create Hi End product and I
@@ -213,8 +201,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <div></div>
 
       <div className={styles.section4}>
         <h3>Contact Us</h3>
