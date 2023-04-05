@@ -1,0 +1,26 @@
+.home-wrapper {
+  // height: calc(100vh - 98px - 134px);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  // display: flex;
+}
+
+.description {
+  // margin-left: 2rem;
+  align-items: end;
+  display: flex;
+  // width: 38%;
+  // height: 450px;
+
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1rem 1rem 0.5rem 1rem;
+  font-size: 18px;
+
+  span {
+    color: #ffc857;
+  }
+}
