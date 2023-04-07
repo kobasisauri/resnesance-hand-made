@@ -13,6 +13,8 @@ import "swiper/css/navigation";
 import ContactImage from "../../assets/contact-us.png";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import Logo from "assets/logo.png";
+import WhiteLogo from "../../assets/whiteLogo.png";
+
 import pic0 from "assets/main.JPG";
 import pic1 from "assets/1.JPG";
 import pic2 from "assets/2.JPG";
@@ -26,12 +28,15 @@ const items = [pic0, pic1, pic2, pic3, pic4, pic5, pic5, pic5, pic5, pic5];
 const Home = () => {
   let color = JSON.parse(localStorage.getItem("theme"));
   const [theme, setTheme] = useState("#181717");
+  const [white, setwhite] = useState(false);
 
   useEffect(() => {
     if (color === "light") {
       setTheme("#181717");
+      setwhite(false);
     } else if (color === "dark") {
       setTheme("#e3e3e3");
+      setwhite(true);
     }
   }, [color]);
 
@@ -108,12 +113,16 @@ const Home = () => {
 
       <div className={styles.section2}>
         <div className={styles["logo-container"]}>
-          <img src={Logo} alt="logo" className={styles.logo} />
+          {white ? (
+            <img src={WhiteLogo} alt="logo" className={styles.image} />
+          ) : (
+            <img src={Logo} alt="logo" className={styles.image} />
+          )}
         </div>
         <div className={styles.description}>
-          <h3>Renaissance Handmade</h3>
+          <h3>RenaissanceHandmade</h3>
+
           <p>
-            Let me introduce you my vision of hardware – mix of various
             materials and different worlds such as furniture, knives, jewelry
             making, art and passion. My goal is to create Hi End product and I
             like to enjoy the process. I mix materials that are not commonly

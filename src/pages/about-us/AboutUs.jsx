@@ -28,20 +28,40 @@ const AboutUs = () => {
       </div>
       <div className={styles.innerwrapper}>
         <h2>RENAISSANCE HANDMADE</h2>
-        <div>
-          <h6>What is it ?</h6>
+        <div style={{ marginTop: "2rem" }}>
+          {/* <h6>What is it ?</h6> */}
           <p>
-            Let me introduce you my vision of hardware – mix of various
+            Let us introduce you our vision of hardware – mix of various
             materials and different worlds such as furniture, knives, jewelry
-            making, art and passion. My goal is to create Hi End product and I
-            like to enjoy the process. I mix materials that are not commonly
-            mixed in hardware, it is challenging, but I like it. I use stainless
-            steel, brass, aluminum, bronze, nickel, copper, precious sorts of
-            rare and exotic hardwood, acrylic polymers, micarta, carbon fiber
-            and more…
+            making, art and passion. <br />
+            <br />
+            We mix materials that are not commonly mixed in hardware, it is
+            challenging, but we like it.
+            <br />
+            <br />
+            Our goal is to get hi end product.
+            <br />
+            <br />
+            We have already created quite broad range of different designs and
+            are constantly working on new ones.
+            <br />
+            <br />
+            New design can be performed according to your specifications and
+            taste giving you an unique chance to create one of a kind product.
+            <br />
+            <br />
+            Design is highly customizable, it’s up to you select materials,
+            number and width of every line, color, overall breadth and length of
+            final product.
+            <br />
+            <br />
+            We use broad range of materials, including as stainless steel,
+            Damascus steel, brass, bronze, nickel, aluminum, copper, beautiful
+            and precious exotic sorts of hardwood, carbon fiber, acrylic
+            polymers, leather, constantly experimenting with new ideas.
           </p>
         </div>
-        <div>
+        {/* <div>
           <h6>HANDMADE</h6>
           <p>
             I use modern technologies such as computer designing or laser
@@ -70,7 +90,7 @@ const AboutUs = () => {
             and precious exotic sorts of hardwood, carbon fiber, acrylic
             polymers, leather, constantly experimenting with new ideas.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
