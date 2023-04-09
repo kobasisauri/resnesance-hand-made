@@ -1,6 +1,6 @@
 .container {
   background: #4e483d;
-  padding: 8px 0;
+  padding: 15px 0;
 
   .wrapper {
     width: 100%;
@@ -15,12 +15,16 @@
   }
 
   .logo {
-    font-size: 20px;
+    font-size: 17px;
     margin-bottom: 10px;
     text-align: center;
 
     a {
-      color: #000;
+      color: #fff;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 

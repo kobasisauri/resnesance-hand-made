@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { TextField } from "@mui/material";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
-import Slider from "react-slick";
+// import { TextField } from "@mui/material";
+// import Button from "@mui/material/Button";
+// import { Link } from "react-router-dom";
+// import Slider from "react-slick";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import ContactImage from "../../assets/contact-us.png";
+// import ContactImage from "../../assets/contact-us.png";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import Logo from "assets/logo.png";
 import WhiteLogo from "../../assets/whiteLogo.png";
@@ -21,64 +21,65 @@ import pic2 from "assets/2.JPG";
 import pic3 from "assets/3.JPG";
 import pic4 from "assets/6.png";
 import pic5 from "assets/5.jpg";
+import pic8 from "assets/8.jpg";
 import styles from "./Home.module.scss";
 
-const items = [pic0, pic1, pic2, pic3, pic4, pic5, pic5, pic5, pic5, pic5];
+const items = [pic8, pic0, pic1, pic2, pic3, pic4, pic5];
 
 const Home = () => {
   let color = JSON.parse(localStorage.getItem("theme"));
-  const [theme, setTheme] = useState("#181717");
+  // const [theme, setTheme] = useState("#181717");
   const [white, setwhite] = useState(false);
 
   useEffect(() => {
     if (color === "light") {
-      setTheme("#181717");
+      // setTheme("#181717");
       setwhite(false);
     } else if (color === "dark") {
-      setTheme("#e3e3e3");
+      // setTheme("#e3e3e3");
       setwhite(true);
     }
   }, [color]);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 4000,
-    autoplaySpeed: 1000,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   speed: 4000,
+  //   autoplaySpeed: 1000,
+  //   cssEase: "linear",
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
 
   return (
-    <div className={styles["home-wrapper"]} style={{ marginTop: "2rem" }}>
+    <div className={styles["home-wrapper"]}>
       <Swiper
         loop={true}
         spaceBetween={10}
@@ -88,9 +89,9 @@ const Home = () => {
           delay: 3500,
           disableOnInteraction: false,
         }}
-        effect={"fade"}
+        effect="fade"
         style={{
-          height: "50rem",
+          // height: "50rem",
 
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff",
@@ -119,6 +120,7 @@ const Home = () => {
             <img src={Logo} alt="logo" className={styles.image} />
           )}
         </div>
+
         <div className={styles.description}>
           <h3>RenaissanceHandmade</h3>
 
@@ -134,8 +136,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div style={{ marginTop: "5rem", width: "100%" }}>
-        <p className={styles.shop}>Shop</p>
+      {/* <div style={{ marginTop: "5rem", width: "100%" }}>
+        <p className={styles.shop}>Gallery</p>
         <div className={styles.section}>
           <p style={{ marginLeft: "1rem", fontSize: "20px" }}>
             Metal products:
@@ -209,9 +211,9 @@ const Home = () => {
             <Link to="/shop">See more</Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className={styles.section4}>
+      {/* <div className={styles.section4}>
         <h3>Contact Us</h3>
         <div className={styles.wrapper}>
           <div className={styles["inner-wrapper"]}>
@@ -269,7 +271,7 @@ const Home = () => {
             <img src={ContactImage} alt="contact-us" />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,13 +11,15 @@ import "swiper/css/zoom";
 import styles from "./ShopItem.module.scss";
 
 import { Zoom, FreeMode, Navigation, Thumbs } from "swiper";
-import { height } from "@mui/system";
+// import { height } from "@mui/system";
 
 function ShopItem() {
+  const imageRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const params = useLocation();
   const [data, setData] = useState(null);
   const [images, setImages] = useState([]);
+  // const [activeImage, setActiveImage] = useState();
 
   useEffect(() => {
     setData(params.state);
@@ -26,12 +28,18 @@ function ShopItem() {
     setImages(items[0]);
   }, [data?.images, params.state]);
 
-  const fullscreenHandler = (e) => {
-    var elem = document.getElementById("myvideo");
+  const fullscreenHandler = () => {
+    // var elem = document.getElementById("myvideo");
 
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-      elem.style.height = "480px";
+    // if (elem.requestFullscreen) {
+    //   elem.requestFullscreen();
+    //   elem.style.height = "480px";
+    // }
+
+    if (imageRef.current && imageRef.current.requestFullscreen) {
+      console.log(imageRef.current);
+      imageRef.current.requestFullscreen();
+      imageRef.current.style.height = "480px";
     }
   };
 
@@ -46,7 +54,6 @@ function ShopItem() {
     <div className={styles["home-wrapper"]}>
       {images?.length && (
         <div style={{ width: "60%" }}>
-          {" "}
           <Swiper
             zoom={true}
             style={{
@@ -71,7 +78,8 @@ function ShopItem() {
                     width: "100%",
                   }}
                   id="myvideo"
-                  onClick={(e) => fullscreenHandler(e)}
+                  ref={imageRef}
+                  onClick={() => fullscreenHandler()}
                 />
               </SwiperSlide>
             ))}

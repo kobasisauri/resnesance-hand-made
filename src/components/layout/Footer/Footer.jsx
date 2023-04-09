@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
-import { Fade } from "react-reveal";
+// import { Fade } from "react-reveal";
 
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <Fade bottom>
+    <>
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.logo}>
-            <Link to="/">
-              RENAISSANCE <br /> HAND MADE
-            </Link>
+            <Link to="/">LLC RENAISSANCE HAND MADE</Link>
           </div>
 
           <div className={styles.email}>contact@renaissancehandmade.com</div>
@@ -19,7 +17,7 @@ const Footer = () => {
           <div className={styles.text}>New York</div>
         </div>
       </div>
-    </Fade>
+    </>
   );
 };
 

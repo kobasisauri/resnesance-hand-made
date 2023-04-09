@@ -2,7 +2,11 @@
   width: 100%;
 
   .wrapper {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    // margin-left: 2.5%;
+    // margin-right: 2.5%;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 7%;
+    margin: 0 auto;
   }
 }

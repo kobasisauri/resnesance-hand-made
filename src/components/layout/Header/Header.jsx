@@ -129,6 +129,7 @@ const Header = ({ toggleTheme, theme, className }) => {
                 className={({ isActive, isPending }) =>
                   `${isPending ? "pending" : isActive ? styles.active : ""}`
                 }
+                onClick={() => setOpen(false)}
               >
                 {nav.item}
               </NavLink>
