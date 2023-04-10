@@ -11,7 +11,7 @@
 // }
 
 .swiper_container {
-  height: 50rem;
+  height: 45rem;
   // padding: 2rem 0;
   position: relative;
 }
@@ -225,3 +225,34 @@
 //   height: 100%;
 //   object-fit: cover;
 // }
+
+.mySwiper2 {
+  height: 20rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .mySwiper2 {
+    height: 32rem;
+  }
+}
+
+.mySwiper1 {
+  height: 20% !important;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper1 .swiper-slide {
+  width: 25% !important;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper1 .swiper-slide-thumb-active {
+  opacity: 1;
+}

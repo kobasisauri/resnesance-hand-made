@@ -14,6 +14,7 @@ import { Zoom, FreeMode, Navigation, Thumbs } from "swiper";
 // import { height } from "@mui/system";
 
 function ShopItem() {
+  const ref = useRef(null);
   const imageRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const params = useLocation();
@@ -37,7 +38,6 @@ function ShopItem() {
     // }
 
     if (imageRef.current && imageRef.current.requestFullscreen) {
-      console.log(imageRef.current);
       imageRef.current.requestFullscreen();
       imageRef.current.style.height = "480px";
     }
@@ -52,86 +52,101 @@ function ShopItem() {
 
   return (
     <div className={styles["home-wrapper"]}>
-      {images?.length && (
-        <div style={{ width: "60%" }}>
-          <Swiper
-            zoom={true}
-            style={{
-              height: "32rem",
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            }}
-            loop={true}
-            spaceBetween={10}
-            navigation={true}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[Zoom, FreeMode, Navigation, Thumbs]}
-            className="mySwiper2"
-          >
-            {images.map((item, i) => (
-              <SwiperSlide key={i}>
-                <img
-                  src={item}
-                  alt="slide_image"
-                  style={{
-                    height: "30rem",
-                    width: "100%",
-                  }}
-                  id="myvideo"
-                  ref={imageRef}
-                  onClick={() => fullscreenHandler()}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <Swiper
-            onSwiper={setThumbsSwiper}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={4}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper"
-          >
-            {images.map((item, i) => (
-              <SwiperSlide key={i} style={{ width: "200px" }}>
-                <img
-                  src={item}
-                  alt="slide_image"
-                  style={{
-                    height: "100px",
-                    // width: "220px",
-                  }}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      )}
+      <div className={styles.inner}>
+        {images?.length && (
+          <div className={styles["slider-container"]}>
+            <Swiper
+              zoom={true}
+              style={{
+                // height: "32rem",
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+              loop={true}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={{ swiper: thumbsSwiper }}
+              modules={[Zoom, FreeMode, Navigation, Thumbs]}
+              className="mySwiper2"
+              ref={ref}
+              // controller={{
+              //   control: new Swiper(".gallery-thumbs", {
+              //     spaceBetween: 10,
+              //     centeredSlides: true,
+              //     slidesPerView: "auto",
+              //     touchRatio: 0.2,
+              //     slideToClickedSlide: true,
+              //   }),
+              // }}
+              onInit={(ev) => {
+                console.log(ev);
+              }}
+            >
+              {images.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <img
+                    src={item}
+                    alt="slide_image"
+                    id="myvideo"
+                    ref={imageRef}
+                    onClick={() => fullscreenHandler()}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-      <div className={styles.description}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            alignItems: "end",
-            height: "100%",
-            width: "100%",
-          }}
-        >
-          <div style={{ width: "100%" }}>
-            <p>Name: {data?.name}</p>
-            <p>Description: {data?.description}</p>
-
-            <p> Materials: {data?.innerTitle}</p>
-
-            <p>
-              Price: <span>{data?.price}$</span>
-            </p>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              loop={true}
+              spaceBetween={10}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper1"
+            >
+              {images.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <img
+                    src={item}
+                    alt="slide_image"
+                    // style={{
+                    //   height: "100px",
+                    //   // width: "220px",
+                    // }}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
-          <Link to="../shop">Back to shop</Link>
+        )}
+
+        <div className={styles.description}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              alignItems: "end",
+              height: "100%",
+              width: "100%",
+            }}
+            onClick={() => {
+              ref.current.swiper.zoom.in();
+            }}
+          >
+            <div style={{ width: "100%" }}>
+              <p>Name: {data?.name}</p>
+              <p>Description: {data?.description}</p>
+
+              <p> Materials: {data?.innerTitle}</p>
+
+              <p>
+                Price: <span>{data?.price}$</span>
+              </p>
+            </div>
+            <Link to="../shop">Back to shop</Link>
+          </div>
         </div>
       </div>
     </div>

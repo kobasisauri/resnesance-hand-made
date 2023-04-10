@@ -1,17 +1,13 @@
 .home-wrapper {
-  height: calc(100vh - 98px - 134px);
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  min-height: calc(100vh - 80px - 55.5px);
+}
 
-  display: flex;
+.inner {
+  padding: 2rem 0;
 }
 
 .description {
-  margin-left: 2rem;
-  // align-items: end;
-  // display: flex;
-  width: 38%;
-  height: 450px;
+  height: 300px;
 
   justify-content: space-between;
   margin-top: 1rem;
@@ -22,5 +18,21 @@
 
   span {
     color: #ffc857;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .inner {
+    display: flex;
+  }
+
+  .slider-container {
+    width: 60%;
+  }
+
+  .description {
+    margin-left: 2rem;
+    width: 38%;
+    height: 450px;
   }
 }

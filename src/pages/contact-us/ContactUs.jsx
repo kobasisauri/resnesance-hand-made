@@ -18,6 +18,23 @@ const ContactUs = () => {
     }
   }, [color]);
 
+  const inputStyle = {
+    maxWidth: "360px",
+    width: "100%",
+    "& .MuiOutlinedInput-root": {
+      "& > fieldset": { borderColor: theme },
+      "&:hover": {
+        "& > fieldset": { borderColor: "#f19666" },
+      },
+      "&.Mui-focused": {
+        "& > fieldset": { borderColor: "#f19666" },
+      },
+    },
+    ".MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-shrink": {
+      color: "#ffc857",
+    },
+  };
+
   return (
     <Fade bottom>
       <div className={styles.container}>
@@ -41,35 +58,22 @@ const ContactUs = () => {
                 id="outlined-basic"
                 label="Name*"
                 variant="outlined"
-                sx={{
-                  width: "360px",
-                  "& .MuiOutlinedInput-root": {
-                    "& > fieldset": { borderColor: theme },
-                  },
-                }}
+                sx={inputStyle}
               />
+
               <TextField
                 id="outlined-basic"
                 label="E-Mail*"
                 variant="outlined"
-                sx={{
-                  width: "360px",
-                  "& .MuiOutlinedInput-root": {
-                    "& > fieldset": { borderColor: theme },
-                  },
-                }}
+                sx={inputStyle}
               />
+
               <TextField
                 id="outlined-multiline-static"
                 label="Message*"
                 multiline
                 rows={3}
-                sx={{
-                  width: "360px",
-                  "& .MuiOutlinedInput-root": {
-                    "& > fieldset": { borderColor: theme },
-                  },
-                }}
+                sx={inputStyle}
               />
 
               <div className={styles["button-wrrapper"]}>
