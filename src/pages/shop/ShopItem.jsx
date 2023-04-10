@@ -10,17 +10,25 @@ import "swiper/css/thumbs";
 import "swiper/css/zoom";
 import styles from "./ShopItem.module.scss";
 
-import { Zoom, FreeMode, Navigation, Thumbs } from "swiper";
+import {
+  Zoom,
+  FreeMode,
+  Navigation,
+  Thumbs,
+  Autoplay,
+  EffectFade,
+  Pagination,
+} from "swiper";
 // import { height } from "@mui/system";
 
 function ShopItem() {
   const ref = useRef(null);
-  const imageRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const params = useLocation();
   const [data, setData] = useState(null);
   const [images, setImages] = useState([]);
   // const [activeImage, setActiveImage] = useState();
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     setData(params.state);
@@ -30,25 +38,18 @@ function ShopItem() {
   }, [data?.images, params.state]);
 
   const fullscreenHandler = () => {
-    // var elem = document.getElementById("myvideo");
+    var elem = document.getElementById("myvideo");
 
-    // if (elem.requestFullscreen) {
-    //   elem.requestFullscreen();
-    //   elem.style.height = "480px";
-    // }
-
-    if (imageRef.current && imageRef.current.requestFullscreen) {
-      imageRef.current.requestFullscreen();
-      imageRef.current.style.height = "480px";
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+      elem.style.height = "480px";
     }
+
+    // if (imageRef.current && imageRef.current.requestFullscreen) {
+    //   imageRef.current.requestFullscreen();
+    //   imageRef.current.style.height = "480px";
+    // }
   };
-
-  // useEffect(() => {
-  //   var elem = document.getElementById("myvideo");
-
-  //   document.exitFullscreen();
-  //   // elem.style.height = "550px";
-  // }, []);
 
   return (
     <div className={styles["home-wrapper"]}>
@@ -78,19 +79,14 @@ function ShopItem() {
               //     slideToClickedSlide: true,
               //   }),
               // }}
-              onInit={(ev) => {
-                console.log(ev);
-              }}
             >
               {images.map((item, i) => (
-                <SwiperSlide key={i}>
-                  <img
-                    src={item}
-                    alt="slide_image"
-                    id="myvideo"
-                    ref={imageRef}
-                    onClick={() => fullscreenHandler()}
-                  />
+                <SwiperSlide
+                  key={i}
+                  onClick={() => setModalOpen(true)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img src={item} alt="slide_image" id="myvideo" />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -149,6 +145,44 @@ function ShopItem() {
           </div>
         </div>
       </div>
+
+      {modalOpen && (
+        <div className={styles.modal}>
+          <div className={styles.close} onClick={() => setModalOpen(false)}>
+            close
+          </div>
+
+          <Swiper
+            loop={true}
+            spaceBetween={10}
+            navigation={true}
+            modules={[Autoplay, EffectFade, Navigation, Pagination]}
+            effect="fade"
+            style={{
+              height: "50rem",
+              width: "90%",
+
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            className="swiper_container"
+          >
+            {images?.length &&
+              images.map((item, i) => (
+                <SwiperSlide key={i} style={{ height: "100%" }}>
+                  <img
+                    src={item}
+                    alt="slide_image"
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  />
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        </div>
+      )}
     </div>
   );
 }
