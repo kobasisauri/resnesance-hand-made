@@ -37,19 +37,19 @@ function ShopItem() {
     setImages(items[0]);
   }, [data?.images, params.state]);
 
-  const fullscreenHandler = () => {
-    var elem = document.getElementById("myvideo");
+  // const fullscreenHandler = () => {
+  //   var elem = document.getElementById("myvideo");
 
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-      elem.style.height = "480px";
-    }
+  //   if (elem.requestFullscreen) {
+  //     elem.requestFullscreen();
+  //     elem.style.height = "480px";
+  //   }
 
-    // if (imageRef.current && imageRef.current.requestFullscreen) {
-    //   imageRef.current.requestFullscreen();
-    //   imageRef.current.style.height = "480px";
-    // }
-  };
+  //   // if (imageRef.current && imageRef.current.requestFullscreen) {
+  //   //   imageRef.current.requestFullscreen();
+  //   //   imageRef.current.style.height = "480px";
+  //   // }
+  // };
 
   return (
     <div className={styles["home-wrapper"]}>
