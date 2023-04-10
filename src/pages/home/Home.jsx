@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import { TextField } from "@mui/material";
 // import Button from "@mui/material/Button";
 // import { Link } from "react-router-dom";
-// import Slider from "react-slick";
+import Slider from "react-slick";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -42,6 +42,7 @@ const Home = () => {
   }, [color]);
 
   // const settings = {
+
   //   dots: true,
   //   infinite: true,
   //   slidesToShow: 4,
@@ -77,6 +78,43 @@ const Home = () => {
   //     },
   //   ],
   // };
+  const settings = {
+    dots: false,
+    infinite: true,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
+    // speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div className={styles["home-wrapper"]}>
@@ -134,6 +172,21 @@ const Home = () => {
             and more…
           </p>
         </div>
+      </div>
+
+      <div className={styles.section3}>
+        <Slider {...settings}>
+          {items.map((item, i) => (
+            // to do
+            <div
+              key={i}
+              style={{ width: "25%", padding: "0 1rem" }}
+              className={styles["item-wrapper"]}
+            >
+              <img src={item} className={styles["slider-item"]} alt="product" />
+            </div>
+          ))}
+        </Slider>
       </div>
 
       {/* <div style={{ marginTop: "5rem", width: "100%" }}>
