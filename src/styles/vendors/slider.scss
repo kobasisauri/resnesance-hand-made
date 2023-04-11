@@ -28,13 +28,13 @@
   }
 
   .swiper-slide {
-    width: 100% !important;
-    height: 100% !important;
+    // width: 100% !important;
+    // height: 100% !important;
   }
 
   .swiper-slide img {
-    width: 100% !important;
-    height: 100% !important;
+    // width: 100% !important;
+    // height: 100% !important;
 
     border-radius: 1rem;
   }
@@ -141,7 +141,7 @@
 }
 
 .mySwiper .swiper-slide {
-  width: 25%;
+  // width: 25%;
   height: 100%;
   opacity: 0.4;
 }
@@ -248,11 +248,20 @@
 }
 
 .mySwiper1 .swiper-slide {
-  width: 25% !important;
+  // width: 25% !important;
   height: 100%;
+  max-height: 150px;
+
   opacity: 0.4;
 }
 
 .mySwiper1 .swiper-slide-thumb-active {
   opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+  .swiper-watch-progress .swiper-wrapper {
+    width: 100%;
+    height: 120px;
+  }
 }

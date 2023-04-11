@@ -19,7 +19,6 @@ import {
   EffectFade,
   Pagination,
 } from "swiper";
-// import { height } from "@mui/system";
 
 function ShopItem() {
   const ref = useRef(null);
@@ -70,6 +69,7 @@ function ShopItem() {
               modules={[Zoom, FreeMode, Navigation, Thumbs]}
               className="mySwiper2"
               ref={ref}
+
               // controller={{
               //   control: new Swiper(".gallery-thumbs", {
               //     spaceBetween: 10,
@@ -100,17 +100,21 @@ function ShopItem() {
               watchSlidesProgress={true}
               modules={[FreeMode, Navigation, Thumbs]}
               className="mySwiper1"
+              breakpoints={{
+                850: {
+                  slidesPerView: 4,
+                },
+                650: {
+                  slidesPerView: 3,
+                },
+                240: {
+                  slidesPerView: 2,
+                },
+              }}
             >
               {images.map((item, i) => (
                 <SwiperSlide key={i}>
-                  <img
-                    src={item}
-                    alt="slide_image"
-                    // style={{
-                    //   height: "100px",
-                    //   // width: "220px",
-                    // }}
-                  />
+                  <img src={item} alt="slide_image" />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -149,7 +153,16 @@ function ShopItem() {
       {modalOpen && (
         <div className={styles.modal}>
           <div className={styles.close} onClick={() => setModalOpen(false)}>
-            close
+            <svg
+              style={{ fill: "#fff" }}
+              height="48"
+              viewBox="0 0 512 512"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title />
+              <path d="M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z" />
+            </svg>
           </div>
 
           <Swiper

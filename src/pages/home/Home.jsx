@@ -78,19 +78,20 @@ const Home = () => {
   //     },
   //   ],
   // };
+
   const settings = {
     dots: false,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 5000,
-    // speed: 500,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 2000,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -99,7 +100,7 @@ const Home = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -107,7 +108,7 @@ const Home = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 520,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -123,10 +124,10 @@ const Home = () => {
         spaceBetween={10}
         navigation={true}
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 3500,
+        //   disableOnInteraction: false,
+        // }}
         effect="fade"
         style={{
           // height: "50rem",
@@ -175,9 +176,9 @@ const Home = () => {
       </div>
 
       <div className={styles.section3}>
+        <p className={styles.gallery}>Gallery</p>
         <Slider {...settings}>
           {items.map((item, i) => (
-            // to do
             <div
               key={i}
               style={{ width: "25%", padding: "0 1rem" }}
