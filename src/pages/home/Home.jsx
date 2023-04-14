@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { TextField } from "@mui/material";
 // import Button from "@mui/material/Button";
@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 // import ContactImage from "../../assets/contact-us.png";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import Logo from "assets/logo.png";
-import WhiteLogo from "../../assets/whiteLogo.png";
+// import WhiteLogo from "../../assets/whiteLogo.png";
 
 import pic0 from "assets/main.JPG";
 import pic1 from "assets/1.JPG";
@@ -27,19 +27,19 @@ import styles from "./Home.module.scss";
 const items = [pic8, pic0, pic1, pic2, pic3, pic4, pic5];
 
 const Home = () => {
-  let color = JSON.parse(localStorage.getItem("theme"));
+  // let color = JSON.parse(localStorage.getItem("theme"));
   // const [theme, setTheme] = useState("#181717");
-  const [white, setwhite] = useState(false);
+  // const [white, setwhite] = useState(false);
 
-  useEffect(() => {
-    if (color === "light") {
-      // setTheme("#181717");
-      setwhite(false);
-    } else if (color === "dark") {
-      // setTheme("#e3e3e3");
-      setwhite(true);
-    }
-  }, [color]);
+  // useEffect(() => {
+  //   if (color === "light") {
+  //     // setTheme("#181717");
+  //     setwhite(false);
+  //   } else if (color === "dark") {
+  //     // setTheme("#e3e3e3");
+  //     setwhite(true);
+  //   }
+  // }, [color]);
 
   // const settings = {
 
@@ -153,30 +153,39 @@ const Home = () => {
 
       <div className={styles.section2}>
         <div className={styles["logo-container"]}>
-          {white ? (
+          {/* {white ? (
             <img src={WhiteLogo} alt="logo" className={styles.image} />
           ) : (
             <img src={Logo} alt="logo" className={styles.image} />
-          )}
+          )} */}
+
+          <img src={Logo} alt="logo" className={styles.image} />
         </div>
 
         <div className={styles.description}>
-          <h3>RenaissanceHandmade</h3>
+          <h3>RENAISSANCE HANDMADE</h3>
 
           <p>
+            Let us introduce you our vision of hardware – mix of various
             materials and different worlds such as furniture, knives, jewelry
-            making, art and passion. My goal is to create Hi End product and I
-            like to enjoy the process. I mix materials that are not commonly
-            mixed in hardware, it is challenging, but I like it. I use stainless
-            steel, brass, aluminum, bronze, nickel, copper, precious sorts of
-            rare and exotic hardwood, acrylic polymers, micarta, carbon fiber
-            and more…
+            making, art and passion. We mix materials that are not commonly
+            mixed in hardware, it is challenging, but we like it. Our goal is to
+            get hi end product. We have already created quite broad range of
+            different designs and are constantly working on new ones. New design
+            can be performed according to your specifications and taste giving
+            you an unique chance to create one of a kind product. Design is
+            highly customizable, it’s up to you select materials, number and
+            width of every line, color, overall breadth and length of final
+            product. We use broad range of materials, including as stainless
+            steel, Damascus steel, brass, bronze, nickel, aluminum, copper,
+            beautiful and precious exotic sorts of hardwood, carbon fiber,
+            acrylic polymers, leather, constantly experimenting with new ideas.
           </p>
         </div>
       </div>
 
       <div className={styles.section3}>
-        <p className={styles.gallery}>Gallery</p>
+        <p className={styles.gallery}>GALLERY</p>
         <Slider {...settings}>
           {items.map((item, i) => (
             <div

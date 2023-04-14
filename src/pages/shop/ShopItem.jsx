@@ -157,7 +157,6 @@ function ShopItem() {
             style={{
               height: "50rem",
               width: "90%",
-
               "--swiper-navigation-color": "#fff",
               "--swiper-pagination-color": "#fff",
             }}
