@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import { TextField } from "@mui/material";
 // import Button from "@mui/material/Button";
 // import { Link } from "react-router-dom";
+import { data } from "data";
 import Slider from "react-slick";
 
 import "swiper/css";
@@ -178,13 +179,17 @@ const Home = () => {
       <div className={styles.section3}>
         <p className={styles.gallery}>Gallery</p>
         <Slider {...settings}>
-          {items.map((item, i) => (
+          {data.map((item, i) => (
             <div
               key={i}
               style={{ width: "25%", padding: "0 1rem" }}
               className={styles["item-wrapper"]}
             >
-              <img src={item} className={styles["slider-item"]} alt="product" />
+              <img
+                src={item.images[0]}
+                className={styles["slider-item"]}
+                alt="product"
+              />
             </div>
           ))}
         </Slider>
