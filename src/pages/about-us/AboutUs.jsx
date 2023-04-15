@@ -1,30 +1,31 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import Logo from "../../assets/logo.png";
-import WhiteLogo from "../../assets/whiteLogo.png";
+// import WhiteLogo from "../../assets/whiteLogo.png";
 
 import styles from "./AboutUs.module.scss";
 
 const AboutUs = () => {
-  let color = JSON.parse(localStorage.getItem("theme"));
+  // let color = JSON.parse(localStorage.getItem("theme"));
 
-  const [theme, setTheme] = useState(false);
+  // const [theme, setTheme] = useState(false);
 
-  useEffect(() => {
-    if (color === "light") {
-      setTheme(true);
-    } else if (color === "dark") {
-      setTheme(false);
-    }
-  }, [color]);
+  // useEffect(() => {
+  //   if (color === "light") {
+  //     setTheme(true);
+  //   } else if (color === "dark") {
+  //     setTheme(false);
+  //   }
+  // }, [color]);
 
   return (
     <div className={styles.container}>
       <div className={styles.innerwrapper}>
-        {!theme ? (
+        {/* {!theme ? (
           <img src={WhiteLogo} alt="logo" className={styles.image} />
         ) : (
           <img src={Logo} alt="logo" className={styles.image} />
-        )}
+        )} */}
+        <img src={Logo} alt="logo" className={styles.image} />
       </div>
       <div className={styles.innerwrapper}>
         <h2>RENAISSANCE HANDMADE</h2>

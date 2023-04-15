@@ -9,10 +9,12 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.logo}>
-            <Link to="/">LLC RENAISSANCE HAND MADE</Link>
+            <Link to="/">RENAISSANCE HANDMADE LLC</Link>
           </div>
 
-          <div className={styles.email}>contact@renaissancehandmade.com</div>
+          <div className={styles.email}>
+            <Link to="/contact-us">contact@renaissancehandmade.com</Link>
+          </div>
 
           <div className={styles.text}>New York</div>
         </div>
