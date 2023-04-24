@@ -36,6 +36,18 @@
     url("./assets//Fonts/Times-New-Roman/timesNewRoman.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "helvetica"; /*Can be any text*/
+  src: local("helvetica"),
+    url("./assets//Fonts/Helvetica-Font/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "helvetica-light"; /*Can be any text*/
+  src: local("helvetica-light"),
+    url("./assets//Fonts/Helvetica-Font/helvetica-light.ttf") format("truetype");
+}
+
 h1,
 h2,
 h6,

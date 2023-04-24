@@ -83,8 +83,7 @@ const Home = () => {
       <Swiper
         loop={true}
         spaceBetween={10}
-        navigation={true}
-        modules={[Autoplay, EffectFade, Navigation, Pagination]}
+        modules={[Autoplay, EffectFade, Pagination]}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
@@ -113,6 +112,68 @@ const Home = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div
+        style={{
+          height: "32px",
+          width: "100%",
+          backgroundColor: "rgb(40,40,40)",
+        }}
+      />
+
+      <div className={styles.section5}>
+        <div className={styles.wrapper5}>
+          <div className={styles.innerWrapper}>
+            <h1>
+              LIVE EDGE TABLES & <br />
+              NATURAL WOOD SLAB FURNITURE
+            </h1>
+            <img
+              src={Logo}
+              alt="logo"
+              style={{ widows: "84px", height: "84px" }}
+            />
+
+            <div className={styles.text5}>
+              Fallen Industry was created with the idea to reuse before we
+              destroy. We create custom-made, natural live edge wood dining
+              tables and furniture, organic round coffee tables, desks,
+              bookshelves, and architectural elements out of fallen tree wood
+              slabs and reclaimed wood. We also provide design planning, concept
+              renderings, shop drawings as well as custom built-ins, fine
+              cabinetry and general millwork for all residential, commercial,
+              office and restaurant builds. All the work is handcrafted at the
+              design studio and wood shop in Brooklyn, NYC.
+            </div>
+          </div>
+
+          <div className={styles.items}>
+            <div className={styles.item}>
+              <img src={pic0} alt="asd" />
+              <h4>VIEW ALL FURNITURE</h4>
+              <p>
+                View the entire collection of live edge natural wood slab
+                furniture and reclaimed wood furniture.
+              </p>
+            </div>
+            <div className={styles.item}>
+              <img src={pic2} alt="asd" />
+              <h4>VIEW ALL FURNITURE</h4>
+              <p>
+                Live edge dining tables. Pick your natural edge slab and we
+                custom fit a base to match your piece.
+              </p>
+            </div>
+            <div className={styles.item}>
+              <img src={pic1} alt="asd" />
+              <h4>VIEW ALL FURNITURE</h4>
+              <p>
+                Custom made seating and storage bench designs made from live
+                edge natural tree slabs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className={styles.section2}>
         <div className={styles["logo-container"]}>
@@ -230,7 +291,6 @@ const Home = () => {
           </Swiper>
         )} */}
       </div>
-
       {/* <div style={{ marginTop: "5rem", width: "100%" }}>
         <p className={styles.shop}>Gallery</p>
         <div className={styles.section}>
@@ -307,7 +367,6 @@ const Home = () => {
           </div>
         </div>
       </div> */}
-
       {/* <div className={styles.section4}>
         <h3>Contact Us</h3>
         <div className={styles.wrapper}>

@@ -5,6 +5,8 @@ import insta from "assets/insta.png";
 import pinterest from "assets/pinterest.png";
 import styles from "./styles.module.scss";
 
+import Image1 from "../../../assets/testtest4.jpg";
+
 function Footer() {
   return (
     <footer>
