@@ -165,7 +165,7 @@ function ShopItem() {
             navigation={true}
             thumbs={{ swiper: firstSwiper }}
             modules={[Zoom, FreeMode, Navigation, Thumbs]}
-            className="swiper_container"
+            className="swiper_container modal_swiper_container"
             onSlideChange={(swiper) => setThumbsSwiper(swiper)}
             effect="fade"
             speed={750}
@@ -176,9 +176,10 @@ function ShopItem() {
                   <img
                     src={item}
                     alt="slide_image"
+                    className={styles["modal-images"]}
                     style={{
-                      height: "100%",
-                      width: "100%",
+                      maxHeight: "100%",
+                      maxWidth: "100%",
                     }}
                   />
                 </SwiperSlide>

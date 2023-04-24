@@ -1,4 +1,4 @@
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { TextField } from "@mui/material";
 // import Button from "@mui/material/Button";
@@ -12,7 +12,15 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import ContactImage from "../../assets/contact-us.png";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
+import {
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination,
+  Zoom,
+  FreeMode,
+  Thumbs,
+} from "swiper";
 import Logo from "assets/logo.png";
 // import WhiteLogo from "../../assets/whiteLogo.png";
 
@@ -28,57 +36,9 @@ import styles from "./Home.module.scss";
 const items = [pic8, pic0, pic1, pic2, pic3, pic4, pic5];
 
 const Home = () => {
-  // let color = JSON.parse(localStorage.getItem("theme"));
-  // const [theme, setTheme] = useState("#181717");
-  // const [white, setwhite] = useState(false);
-
-  // useEffect(() => {
-  //   if (color === "light") {
-  //     // setTheme("#181717");
-  //     setwhite(false);
-  //   } else if (color === "dark") {
-  //     // setTheme("#e3e3e3");
-  //     setwhite(true);
-  //   }
-  // }, [color]);
-
-  // const settings = {
-
-  //   dots: true,
-  //   infinite: true,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   speed: 4000,
-  //   autoplaySpeed: 1000,
-  //   cssEase: "linear",
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3,
-  //         infinite: true,
-  //         dots: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         initialSlide: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
+  const [modalOpen, setModalOpen] = useState(null);
+  // const [firstSwiper, setFirstSwiper] = useState(null);
+  // const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const settings = {
     dots: false,
@@ -125,10 +85,10 @@ const Home = () => {
         spaceBetween={10}
         navigation={true}
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
-        // autoplay={{
-        //   delay: 3500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
         effect="fade"
         style={{
           // height: "50rem",
@@ -193,6 +153,7 @@ const Home = () => {
               key={i}
               style={{ width: "25%", padding: "0 1rem" }}
               className={styles["item-wrapper"]}
+              onClick={() => setModalOpen(item.images[0])}
             >
               <img
                 src={item.images[0]}
@@ -202,6 +163,70 @@ const Home = () => {
             </div>
           ))}
         </Slider>
+      </div>
+
+      <div
+        className={styles.modal}
+        style={{ visibility: !!modalOpen ? "visible" : "hidden" }}
+      >
+        <div className={styles.close} onClick={() => setModalOpen(null)}>
+          <svg
+            style={{ fill: "#fff" }}
+            height="48"
+            viewBox="0 0 512 512"
+            width="48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title />
+            <path d="M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z" />
+          </svg>
+        </div>
+
+        <img
+          src={modalOpen}
+          alt="slide_image"
+          className={styles["modal-images"]}
+          style={{
+            maxHeight: "100%",
+            maxWidth: "100%",
+          }}
+        />
+
+        {/* {data?.length && (
+          <Swiper
+            zoom={true}
+            style={{
+              height: "50rem",
+              width: "90%",
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            loop={true}
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{ swiper: firstSwiper }}
+            modules={[Zoom, FreeMode, Navigation, Thumbs]}
+            className="swiper_container modal_swiper_container"
+            onSlideChange={(swiper) => setThumbsSwiper(swiper)}
+            effect="fade"
+            speed={750}
+          >
+            {data?.length &&
+              data.map((item, i) => (
+                <SwiperSlide key={i} style={{ height: "100%" }}>
+                  <img
+                    src={item.images[0]}
+                    alt="slide_image"
+                    className={styles["modal-images"]}
+                    style={{
+                      maxHeight: "100%",
+                      maxWidth: "100%",
+                    }}
+                  />
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        )} */}
       </div>
 
       {/* <div style={{ marginTop: "5rem", width: "100%" }}>
