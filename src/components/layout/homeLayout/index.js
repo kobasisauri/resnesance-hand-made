@@ -1,15 +1,18 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../Header";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const HomeLayout = ({ toggleTheme, theme }) => {
   return (
     <>
-      <Header toggleTheme={toggleTheme} className={"home"} theme={theme} />
+      <Header toggleTheme={toggleTheme} theme={theme} />
 
       <div>
         <Outlet />
       </div>
+
+      <Footer />
     </>
   );
 };

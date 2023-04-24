@@ -130,13 +130,15 @@ const Home = () => {
         //   disableOnInteraction: false,
         // }}
         effect="fade"
-        style={{
-          // height: "50rem",
-
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
+        style={
+          {
+            // height: "50rem",
+            // "--swiper-navigation-color": "#fff",
+            // "--swiper-pagination-color": "#fff",
+          }
+        }
         className="swiper_container"
+        arrows={false}
       >
         {items.map((item, i) => (
           <SwiperSlide key={i} style={{ height: "100%" }}>
