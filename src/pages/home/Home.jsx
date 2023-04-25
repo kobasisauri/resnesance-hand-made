@@ -156,33 +156,27 @@ const Home = () => {
               </p>
             </div>
             <div className={styles.item}>
-              <img src={pic2} alt="asd" />
-              <h4>VIEW ALL FURNITURE</h4>
+              <img src={pic4} alt="asd" />
+              <h4>DINING TABLES</h4>
               <p>
-                Live edge dining tables. Pick your natural edge slab and we
-                custom fit a base to match your piece.
+                Live edge dining tables. Pick your natural edge <br /> slab and
+                we custom fit a base to match your piece.
               </p>
             </div>
             <div className={styles.item}>
               <img src={pic1} alt="asd" />
-              <h4>VIEW ALL FURNITURE</h4>
+              <h4>BENCHES</h4>
               <p>
-                Custom made seating and storage bench designs made from live
-                edge natural tree slabs.
+                Custom made seating and storage bench designs <br /> made from
+                live edge natural tree slabs.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className={styles.section2}>
+      {/* <div className={styles.section2}>
         <div className={styles["logo-container"]}>
-          {/* {white ? (
-            <img src={WhiteLogo} alt="logo" className={styles.image} />
-          ) : (
-            <img src={Logo} alt="logo" className={styles.image} />
-          )} */}
-
           <img src={Logo} alt="logo" className={styles.image} />
         </div>
 
@@ -226,7 +220,7 @@ const Home = () => {
             </div>
           ))}
         </Slider>
-      </div>
+      </div> */}
 
       <div
         className={styles.modal}
