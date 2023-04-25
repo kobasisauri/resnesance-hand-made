@@ -171,6 +171,56 @@ const Home = () => {
                 live edge natural tree slabs.
               </p>
             </div>
+
+            <div className={styles.item}>
+              <img src={pic0} alt="asd" />
+              <h4>VIEW ALL FURNITURE</h4>
+              <p>
+                View the entire collection of live edge natural wood slab
+                furniture and reclaimed wood furniture.
+              </p>
+            </div>
+            <div className={styles.item}>
+              <img src={pic4} alt="asd" />
+              <h4>DINING TABLES</h4>
+              <p>
+                Live edge dining tables. Pick your natural edge <br /> slab and
+                we custom fit a base to match your piece.
+              </p>
+            </div>
+            <div className={styles.item}>
+              <img src={pic1} alt="asd" />
+              <h4>BENCHES</h4>
+              <p>
+                Custom made seating and storage bench designs <br /> made from
+                live edge natural tree slabs.
+              </p>
+            </div>
+
+            <div className={styles.item}>
+              <img src={pic0} alt="asd" />
+              <h4>VIEW ALL FURNITURE</h4>
+              <p>
+                View the entire collection of live edge natural wood slab
+                furniture and reclaimed wood furniture.
+              </p>
+            </div>
+            <div className={styles.item}>
+              <img src={pic4} alt="asd" />
+              <h4>DINING TABLES</h4>
+              <p>
+                Live edge dining tables. Pick your natural edge <br /> slab and
+                we custom fit a base to match your piece.
+              </p>
+            </div>
+            <div className={styles.item}>
+              <img src={pic1} alt="asd" />
+              <h4>BENCHES</h4>
+              <p>
+                Custom made seating and storage bench designs <br /> made from
+                live edge natural tree slabs.
+              </p>
+            </div>
           </div>
         </div>
       </div>

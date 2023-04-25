@@ -235,12 +235,14 @@
     .items {
       margin-top: 5rem;
       display: flex;
+      flex-wrap: wrap;
 
       .item {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 33.333%;
+        margin-bottom: 2rem;
 
         img {
           border-radius: 50%;
