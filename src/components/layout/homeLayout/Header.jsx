@@ -1,11 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles2 from "./styles.module.scss";
 
 import styles from "./styles.module.scss";
 
-import Image2 from "../../../assets/test.jpg";
-import Image3 from "../../../assets/testest2.jpg";
-import Image4 from "../../../assets/testtest3.jpg";
+// import Image2 from "../../../assets/test.jpg";
+// import Image3 from "../../../assets/testest2.jpg";
+// import Image4 from "../../../assets/testtest3.jpg";
 import Image1 from "../../../assets/testtest4.jpg";
 
 import logo from "assets/whiteLogo.png";

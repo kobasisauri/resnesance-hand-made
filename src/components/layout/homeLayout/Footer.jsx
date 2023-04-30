@@ -5,7 +5,7 @@ import insta from "assets/insta.png";
 import pinterest from "assets/pinterest.png";
 import styles from "./styles.module.scss";
 
-import Image1 from "../../../assets/testtest4.jpg";
+// import Image1 from "../../../assets/testtest4.jpg";
 
 function Footer() {
   return (
@@ -36,15 +36,13 @@ function Footer() {
         </ul>
 
         <div className={styles["company-details"]}>
-          646-257-9480 | 140 58th Street, Brooklyn New York, 11220 |{" "}
+          RENAISSANCE HANDMADE LLC | New York |{" "}
           <span>
             <Link to="/contact-us">contact@renaissancehandmade.com</Link>
           </span>
         </div>
 
-        <div className={styles.rights}>
-          Fallen Industry is a registered trademark. © 2023 All Rights reserved.
-        </div>
+        <div className={styles.rights}>© 2023 All Rights reserved.</div>
       </div>
     </footer>
   );

@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import { TextField } from "@mui/material";
 // import Button from "@mui/material/Button";
 // import { Link } from "react-router-dom";
-import { data } from "data";
-import Slider from "react-slick";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -12,15 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import ContactImage from "../../assets/contact-us.png";
-import {
-  Autoplay,
-  EffectFade,
-  Navigation,
-  Pagination,
-  Zoom,
-  FreeMode,
-  Thumbs,
-} from "swiper";
+import { Autoplay, EffectFade, Pagination } from "swiper";
 import Logo from "assets/logo.png";
 // import WhiteLogo from "../../assets/whiteLogo.png";
 
@@ -40,43 +30,43 @@ const Home = () => {
   // const [firstSwiper, setFirstSwiper] = useState(null);
   // const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 2000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 520,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 3000,
+  //   speed: 2000,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
+  //   arrows: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1100,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         dots: false,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 800,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 520,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
 
   return (
     <div className={styles["home-wrapper"]}>
@@ -124,8 +114,8 @@ const Home = () => {
         <div className={styles.wrapper5}>
           <div className={styles.innerWrapper}>
             <h1>
-              LIVE EDGE TABLES & <br />
-              NATURAL WOOD SLAB FURNITURE
+              RENAISSANCE <br />
+              HANDMADE
             </h1>
             <img
               src={Logo}
@@ -134,22 +124,41 @@ const Home = () => {
             />
 
             <div className={styles.text5}>
-              Fallen Industry was created with the idea to reuse before we
-              destroy. We create custom-made, natural live edge wood dining
-              tables and furniture, organic round coffee tables, desks,
-              bookshelves, and architectural elements out of fallen tree wood
-              slabs and reclaimed wood. We also provide design planning, concept
-              renderings, shop drawings as well as custom built-ins, fine
-              cabinetry and general millwork for all residential, commercial,
-              office and restaurant builds. All the work is handcrafted at the
-              design studio and wood shop in Brooklyn, NYC.
+              Let us introduce you our vision of hardware – mix of various
+              materials and different worlds such as furniture, knives, jewelry
+              making, art and passion. <br />
+              <br />
+              We mix materials that are not commonly mixed in hardware, it is
+              challenging, but we like it.
+              <br />
+              <br />
+              Our goal is to get hi end product.
+              <br />
+              <br />
+              We have already created quite broad range of different designs and
+              are constantly working on new ones.
+              <br />
+              <br />
+              New design can be performed according to your specifications and
+              taste giving you an unique chance to create one of a kind product.
+              <br />
+              <br />
+              Design is highly customizable, it’s up to you select materials,
+              number and width of every line, color, overall breadth and length
+              of final product.
+              <br />
+              <br />
+              We use broad range of materials, including as stainless steel,
+              Damascus steel, brass, bronze, nickel, aluminum, copper, beautiful
+              and precious exotic sorts of hardwood, carbon fiber, acrylic
+              polymers, leather, constantly experimenting with new ideas.
             </div>
           </div>
 
           <div className={styles.items}>
             <div className={styles.item}>
               <img src={pic0} alt="asd" />
-              <h4>VIEW ALL FURNITURE</h4>
+              <h4>KITCHEN</h4>
               <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
@@ -157,7 +166,7 @@ const Home = () => {
             </div>
             <div className={styles.item}>
               <img src={pic4} alt="asd" />
-              <h4>DINING TABLES</h4>
+              <h4>VANITY</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
@@ -165,7 +174,7 @@ const Home = () => {
             </div>
             <div className={styles.item}>
               <img src={pic1} alt="asd" />
-              <h4>BENCHES</h4>
+              <h4>BAR</h4>
               <p>
                 Custom made seating and storage bench designs <br /> made from
                 live edge natural tree slabs.
@@ -174,7 +183,7 @@ const Home = () => {
 
             <div className={styles.item}>
               <img src={pic0} alt="asd" />
-              <h4>VIEW ALL FURNITURE</h4>
+              <h4>CLOSET</h4>
               <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
@@ -182,7 +191,7 @@ const Home = () => {
             </div>
             <div className={styles.item}>
               <img src={pic4} alt="asd" />
-              <h4>DINING TABLES</h4>
+              <h4>WINE ROOM</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
@@ -190,7 +199,7 @@ const Home = () => {
             </div>
             <div className={styles.item}>
               <img src={pic1} alt="asd" />
-              <h4>BENCHES</h4>
+              <h4>NIGHT STAND</h4>
               <p>
                 Custom made seating and storage bench designs <br /> made from
                 live edge natural tree slabs.
@@ -199,7 +208,7 @@ const Home = () => {
 
             <div className={styles.item}>
               <img src={pic0} alt="asd" />
-              <h4>VIEW ALL FURNITURE</h4>
+              <h4>Library</h4>
               <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
@@ -207,7 +216,7 @@ const Home = () => {
             </div>
             <div className={styles.item}>
               <img src={pic4} alt="asd" />
-              <h4>DINING TABLES</h4>
+              <h4>MOVIE THEATRE</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
@@ -215,7 +224,7 @@ const Home = () => {
             </div>
             <div className={styles.item}>
               <img src={pic1} alt="asd" />
-              <h4>BENCHES</h4>
+              <h4>SIGNATURE</h4>
               <p>
                 Custom made seating and storage bench designs <br /> made from
                 live edge natural tree slabs.
