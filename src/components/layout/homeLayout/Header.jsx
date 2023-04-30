@@ -38,8 +38,8 @@ function Header() {
               <span>RENAISSANCE</span> HANDMADE
             </div>
             <div className={styles["small-text"]}>
-              FALLEN TREES RECLAIMED & REBORN WITH BEAUTIFUL PURPOSE
-              <span> BY PAYL KRUGER</span>
+              CUSTOM HANDMADE
+              <span> HARDWARE </span>
             </div>
 
             <img src={logo} alt="logo" />
