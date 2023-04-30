@@ -54,6 +54,7 @@ function ShopItem() {
                 // height: "32rem",
                 "--swiper-navigation-color": "#fff",
                 "--swiper-pagination-color": "#fff",
+                margin: "2rem 0",
               }}
               loop={true}
               spaceBetween={10}
