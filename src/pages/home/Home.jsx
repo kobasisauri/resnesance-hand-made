@@ -217,7 +217,7 @@ const Home = () => {
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <img src={pic0} alt="asd" width="100%" />
-              <h4>Library</h4>
+              <h4>LIBRARY</h4>
               <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
