@@ -222,6 +222,7 @@
 
       .text5 {
         margin-top: 2rem;
+        padding: 0 1rem;
         color: rgb(121, 121, 122);
         font-style: italic;
         text-align: center;
@@ -232,40 +233,36 @@
       }
     }
 
-    .items {
-      margin-top: 5rem;
+    .item {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
 
-      .item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 33.333%;
-        margin-bottom: 2rem;
+      // max-width: 320px;
+      margin-bottom: 2rem;
 
-        img {
-          border-radius: 1rem;
-          width: 222px;
-          height: 150px;
-          margin-bottom: 1rem;
-        }
+      img {
+        border-radius: 1rem;
+        width: 222px;
+        height: 150px;
+        margin-bottom: 1rem;
+      }
 
-        h4 {
-          font-size: 20px;
-          letter-spacing: 0.1em;
-          text-align: center;
-        }
+      h4 {
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        text-align: center;
+      }
 
-        p {
-          font-size: 14px;
-          text-align: center;
-          color: rgb(161, 162, 163);
-          font-style: italic;
-          font-family: serif;
-          letter-spacing: normal;
-          line-height: normal;
-        }
+      p {
+        max-width: 285px;
+        font-size: 14px;
+        text-align: center;
+        color: rgb(161, 162, 163);
+        font-style: italic;
+        font-family: serif;
+        letter-spacing: normal;
+        line-height: normal;
       }
     }
   }
