@@ -47,12 +47,16 @@
     margin-top: 24px;
   }
 }
+
 .items {
+  position: sticky;
+  top: 0;
   display: flex;
   background-color: rgb(40, 40, 40);
   height: 44px;
   justify-content: center;
   align-items: center;
+
   div {
     a {
       display: flex;

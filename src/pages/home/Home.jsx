@@ -15,7 +15,7 @@ import Logo from "assets/logo.png";
 // import WhiteLogo from "../../assets/whiteLogo.png";
 
 import pic0 from "assets/main.JPG";
-// import pic1 from "assets/1.JPG";
+import pic1 from "assets/1.JPG";
 import pic2 from "assets/2.JPG";
 import pic3 from "assets/3.JPG";
 import pic4 from "assets/6.png";
@@ -23,14 +23,14 @@ import pic5 from "assets/5.jpg";
 import pic8 from "assets/8.jpg";
 import styles from "./Home.module.scss";
 
-import archeuli1 from "assets/shop/QUAD_WG/1.jpeg";
-import archeuli2 from "assets/shop/ANG_L_KNOB/1.jpeg";
-import archeuli3 from "assets/shop/ARES/1.jpeg";
-import archeuli4 from "assets/shop/ARES_MIX/1.jpeg";
-import archeuli5 from "assets/shop/HEX_R/1.jpeg";
-import archeuli6 from "assets/shop/ASSIMETRIC_ART/1.jpeg";
-import pic1 from "assets/1.JPG";
-import archeuli8 from "assets/shop/ASSIMETRIC_AW/1.jpeg";
+import kitchen from "assets/shop/QUAD_WG/1.jpeg";
+import vanity from "assets/shop/ANG_L_KNOB/1.jpeg";
+import bar from "assets/shop/ARES/1.jpeg";
+import closet from "assets/shop/ARES_MIX/1.jpeg";
+import wineRoom from "assets/shop/HEX_R/1.jpeg";
+import library from "assets/shop/ASSIMETRIC_ART/1.jpeg";
+import movieTheatre from "assets/1.JPG";
+import signature from "assets/shop/ASSIMETRIC_AW/1.jpeg";
 
 const items = [pic8, pic0, pic1, pic2, pic3, pic4, pic5];
 
@@ -166,23 +166,25 @@ const Home = () => {
 
           <div className={`row`} style={{ marginTop: "5rem" }}>
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic0} alt="asd" width="100%" />
+              <img src={kitchen} alt="asd" width="100%" />
               <h4>KITCHEN</h4>
               <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
               </p>
             </div>
+
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic4} alt="asd" width="100%" />
+              <img src={vanity} alt="asd" width="100%" />
               <h4>VANITY</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
               </p>
             </div>
+
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic1} alt="asd" width="100%" />
+              <img src={bar} alt="asd" width="100%" />
               <h4>BAR</h4>
               <p>
                 Custom made seating and storage bench designs <br /> made from
@@ -191,23 +193,25 @@ const Home = () => {
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic0} alt="asd" width="100%" />
+              <img src={closet} alt="asd" width="100%" />
               <h4>CLOSET</h4>
               <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
               </p>
             </div>
+
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic4} alt="asd" width="100%" />
+              <img src={wineRoom} alt="asd" width="100%" />
               <h4>WINE ROOM</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
               </p>
             </div>
+
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic1} alt="asd" width="100%" />
+              <img src={pic0} alt="asd" width="100%" />
               <h4>NIGHT STAND</h4>
               <p>
                 Custom made seating and storage bench designs <br /> made from
@@ -216,23 +220,25 @@ const Home = () => {
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic0} alt="asd" width="100%" />
+              <img src={library} alt="asd" width="100%" />
               <h4>LIBRARY</h4>
               <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
               </p>
             </div>
+
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic4} alt="asd" width="100%" />
+              <img src={movieTheatre} alt="asd" width="100%" />
               <h4>MOVIE THEATRE</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
               </p>
             </div>
+
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
-              <img src={pic1} alt="asd" width="100%" />
+              <img src={signature} alt="asd" width="100%" />
               <h4>SIGNATURE</h4>
               <p>
                 Custom made seating and storage bench designs <br /> made from
@@ -243,7 +249,7 @@ const Home = () => {
 
           {/* <div className={styles.items}>
             <div className={styles.item}>
-              <img src={archeuli1} alt="asd" />
+              <img src={kitchen} alt="asd" />
               <h4>KITCHEN</h4>
               <p>
                 View the entire collection of live edge natural wood slab
@@ -251,7 +257,7 @@ const Home = () => {
               </p>
             </div>
             <div className={styles.item}>
-              <img src={archeuli2} alt="asd" />
+              <img src={vanity} alt="asd" />
               <h4>VANITY</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
@@ -259,7 +265,7 @@ const Home = () => {
               </p>
             </div>
             <div className={styles.item}>
-              <img src={archeuli3} alt="asd" />
+              <img src={bar} alt="asd" />
               <h4>BAR</h4>
               <p>
                 Custom made seating and storage bench designs <br /> made from
@@ -268,7 +274,7 @@ const Home = () => {
             </div>
 
             <div className={styles.item}>
-              <img src={archeuli4} alt="asd" />
+              <img src={closet} alt="asd" />
               <h4>CLOSET</h4>
               <p>
                 View the entire collection of live edge natural wood slab
@@ -276,7 +282,7 @@ const Home = () => {
               </p>
             </div>
             <div className={styles.item}>
-              <img src={archeuli5} alt="asd" />
+              <img src={wineRoom} alt="asd" />
               <h4>WINE ROOM</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
@@ -293,7 +299,7 @@ const Home = () => {
             </div>
 
             <div className={styles.item}>
-              <img src={archeuli6} alt="asd" />
+              <img src={library} alt="asd" />
               <h4>Library</h4>
               <p>
                 View the entire collection of live edge natural wood slab
@@ -301,7 +307,7 @@ const Home = () => {
               </p>
             </div>
             <div className={styles.item}>
-              <img src={pic1} alt="asd" />
+              <img src={movieTheatre} alt="asd" />
               <h4>MOVIE THEATRE</h4>
               <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
@@ -309,7 +315,7 @@ const Home = () => {
               </p>
             </div>
             <div className={styles.item}>
-              <img src={archeuli8} alt="asd" />
+              <img src={signature} alt="asd" />
               <h4>SIGNATURE</h4>
               <p>
                 Custom made seating and storage bench designs <br /> made from
