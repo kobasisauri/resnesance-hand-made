@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../Header";
-import Footer from "../Footer/Footer";
+import Header from "../homeLayout/Header";
+import Footer from "../homeLayout/Footer";
 import styles from "./styles.module.scss";
 
 const InnerLayout = ({ toggleTheme, theme }) => {
