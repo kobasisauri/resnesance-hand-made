@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 // import Image4 from "../../../assets/testtest3.jpg";
 import Image1 from "../../../assets/testtest4.jpg";
 
-import logo from "assets/whiteLogo.png";
+import logo from "assets/logo.png";
 
 const navs = [
   { item: "HOME", link: "home" },
