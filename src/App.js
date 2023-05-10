@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Navigate, Routes } from "react-router-dom";
+import { Route, Navigate, Routes, useLocation } from "react-router-dom";
 import HomeLayout from "./components/layout/homeLayout";
 import InnerLayout from "./components/layout/innerLayout";
 
@@ -16,6 +16,11 @@ import styles from "./App.module.scss";
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     setTheme(JSON.parse(localStorage.getItem("theme")) || "dark");
@@ -34,14 +39,12 @@ function App() {
     <div className={styles[theme]}>
       <Routes>
         <Route path="/" element={<Navigate replace="true" to="/home" />} />
-
         <Route
           path="/"
           element={<HomeLayout toggleTheme={toggleTheme} theme={theme} />}
         >
           <Route path="/home" element={<Home />} />
         </Route>
-
         <Route
           path="/"
           element={<InnerLayout toggleTheme={toggleTheme} theme={theme} />}

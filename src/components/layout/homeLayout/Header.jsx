@@ -3,9 +3,6 @@ import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-// import Image2 from "../../../assets/test.jpg";
-// import Image3 from "../../../assets/testest2.jpg";
-// import Image4 from "../../../assets/testtest3.jpg";
 import Image1 from "assets/testtest4.jpg";
 import logo from "assets/logo.png";
 
@@ -14,7 +11,6 @@ import styles from "./styles.module.scss";
 
 const navs = [
   { item: "HOME", link: "home" },
-  // { item: "GALLERY", link: "gallery" },
   { item: "SHOP", link: "shop" },
   { item: "ABOUT", link: "about-us" },
   { item: "CONTACT", link: "contact-us" },

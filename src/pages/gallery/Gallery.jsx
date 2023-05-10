@@ -1,4 +1,3 @@
-import { Fade } from "react-reveal";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import rame from "assets/5.jpg";
@@ -44,15 +43,13 @@ const Gallery = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <Fade bottom>
-          <img src={rame} alt="a" className={styles["main-image"]} />
-          <p className={styles.text}>
-            Art Text and Letters apps are loaded with quickly adjustable text
-            design templates. These templates cover all typography trends
-            ranging from 2D calligraphy, watercolor and aquarelle to
-            photorealistic 3D text, social media graphics and more.
-          </p>
-        </Fade>
+        <img src={rame} alt="a" className={styles["main-image"]} />
+        <p className={styles.text}>
+          Art Text and Letters apps are loaded with quickly adjustable text
+          design templates. These templates cover all typography trends ranging
+          from 2D calligraphy, watercolor and aquarelle to photorealistic 3D
+          text, social media graphics and more.
+        </p>
       </div>
 
       {/* <Slider
@@ -129,11 +126,9 @@ const Gallery = () => {
 
           {items.map((item, i) => (
             <Grid item xs={12} md={6} lg={4} key={i}>
-              <Fade bottom>
-                <div className={styles.item}>
-                  <img src={item} alt="pic" />
-                </div>
-              </Fade>
+              <div className={styles.item}>
+                <img src={item} alt="pic" />
+              </div>
             </Grid>
           ))}
         </Grid>

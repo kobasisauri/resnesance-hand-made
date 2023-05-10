@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Fade } from "react-reveal";
 import { TextField } from "@mui/material";
 
 import Button from "@mui/material/Button";
@@ -36,60 +35,54 @@ const ContactUs = () => {
   };
 
   return (
-    <Fade bottom>
-      <div className={styles.container}>
-        <h2>CONTACT US</h2>
-        <div className={styles.wrapper}>
-          <div className={styles["inner-wrapper"]}>
-            <div className={styles.items}>
-              <h5>E-MAIL</h5>
-              <p>contact@renaissancehandmade.com</p>
-            </div>
-
-            <div className={styles.items}>
-              <h5>RENAISSANCE HANDMADE LLC</h5>
-              <p>New York</p>
-            </div>
+    <div className={styles.container}>
+      <h2>CONTACT US</h2>
+      <div className={styles.wrapper}>
+        <div className={styles["inner-wrapper"]}>
+          <div className={styles.items}>
+            <h5>E-MAIL</h5>
+            <p>contact@renaissancehandmade.com</p>
           </div>
 
-          <div className={styles["inner-wrapper"]}>
-            <form className={styles.form}>
-              <TextField
-                id="outlined-basic"
-                label="Name*"
-                variant="outlined"
-                sx={inputStyle}
-              />
-
-              <TextField
-                id="outlined-basic"
-                label="E-Mail*"
-                variant="outlined"
-                sx={inputStyle}
-              />
-
-              <TextField
-                id="outlined-multiline-static"
-                label="Message*"
-                multiline
-                rows={3}
-                sx={inputStyle}
-              />
-
-              <div className={styles["button-wrrapper"]}>
-                <Button
-                  type="submit"
-                  variant="outlined"
-                  sx={{ width: "250px" }}
-                >
-                  Submit
-                </Button>
-              </div>
-            </form>
+          <div className={styles.items}>
+            <h5>RENAISSANCE HANDMADE LLC</h5>
+            <p>New York</p>
           </div>
         </div>
+
+        <div className={styles["inner-wrapper"]}>
+          <form className={styles.form}>
+            <TextField
+              id="outlined-basic"
+              label="Name*"
+              variant="outlined"
+              sx={inputStyle}
+            />
+
+            <TextField
+              id="outlined-basic"
+              label="E-Mail*"
+              variant="outlined"
+              sx={inputStyle}
+            />
+
+            <TextField
+              id="outlined-multiline-static"
+              label="Message*"
+              multiline
+              rows={3}
+              sx={inputStyle}
+            />
+
+            <div className={styles["button-wrrapper"]}>
+              <Button type="submit" variant="outlined" sx={{ width: "250px" }}>
+                Submit
+              </Button>
+            </div>
+          </form>
+        </div>
       </div>
-    </Fade>
+    </div>
   );
 };
 
