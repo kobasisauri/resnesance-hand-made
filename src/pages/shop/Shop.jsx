@@ -124,23 +124,22 @@ const Shop = () => {
   const [filterCategories, setFilterCategories] = useState([]);
 
   const [fileredData, setFilteredData] = useState(data);
-  const [fileredCategoryData, setFilteredcategoryData] = useState(data);
 
   useEffect(() => {
     if (data.length) {
       let x = [];
       let y = [];
 
-      data.map((item) => {
-        item.tags.map((i) => {
+      data.forEach((item) => {
+        item.tags.forEach((i) => {
           if (!x.includes(i.toLowerCase())) {
             x.push(i.toLowerCase());
           }
         });
       });
 
-      data.map((item) => {
-        item?.category?.map((i) => {
+      data.forEach((item) => {
+        item?.category?.forEach((i) => {
           if (!y.includes(i.toLowerCase())) {
             y.push(i.toLowerCase());
           }
@@ -153,13 +152,22 @@ const Shop = () => {
   }, []);
 
   useEffect(() => {
-    if (filter) {
+    if (filter && !filterCategory) {
       setFilteredData(data.filter((item) => item.tags.includes(filter)));
-    }
-    if (filterCategory) {
-      setFilteredcategoryData(
+    } else if (filterCategory && !filter) {
+      setFilteredData(
         data.filter((item) => item?.category?.includes(filterCategory))
       );
+    } else if (filter && filterCategory) {
+      setFilteredData(
+        data.filter(
+          (item) =>
+            item?.category?.includes(filterCategory) &&
+            item.tags.includes(filter)
+        )
+      );
+    } else {
+      setFilteredData(data);
     }
   }, [filter, filterCategory]);
 
