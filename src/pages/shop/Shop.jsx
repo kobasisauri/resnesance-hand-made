@@ -239,6 +239,7 @@ const Shop = () => {
               selected={filter}
               handelMouseDown={handelMouseDown}
               clear={() => setFilter("")}
+              style={{ backgroundColor: "red" }}
             />
 
             <Dropdown.Menu
@@ -247,7 +248,7 @@ const Shop = () => {
                 modifiers: [{ name: "offset", options: { offset: [0, 10] } }],
               }}
             >
-              <div className="position-relative">
+              <div className={`position-relative`}>
                 {filters.length &&
                   filters.map((item) => (
                     <div
@@ -258,6 +259,7 @@ const Shop = () => {
                         setFilter(item);
                         setVisible(false);
                       }}
+                      style={{ color: "rgb(147 147 147)" }}
                     >
                       {item}
                     </div>
@@ -296,6 +298,7 @@ const Shop = () => {
                         setFilterCategory(item);
                         setVisible(false);
                       }}
+                      style={{ color: "rgb(147 147 147)" }}
                     >
                       {item}
                     </div>

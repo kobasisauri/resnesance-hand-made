@@ -4,7 +4,7 @@ import Switch from "@mui/material/Switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
 import Image1 from "assets/testtest4.jpg";
-import logo from "assets/logo.png";
+import WhiteLogo from "assets/white-logo.png";
 
 import styles2 from "./styles.module.scss";
 import styles from "./styles.module.scss";
@@ -92,7 +92,7 @@ function Header({ toggleTheme }) {
               <span> HARDWARE </span>
             </div>
 
-            <img src={logo} alt="logo" />
+            <img src={WhiteLogo} alt="logo" />
           </div>
         </div>
       </div>

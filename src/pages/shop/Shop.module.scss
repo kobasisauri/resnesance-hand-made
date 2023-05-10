@@ -164,8 +164,8 @@
       &:hover,
       &:focus,
       &:active {
-        color: #212529;
-        background: darken(#fff, 2%);
+        color: #212529 !important;
+        background: darken(#f5f5f5, 2%);
       }
 
       input[type="checkbox"],
