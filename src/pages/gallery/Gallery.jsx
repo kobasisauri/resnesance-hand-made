@@ -16,7 +16,6 @@ import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 // --------------------//
 
-// import { ImageGroup, Image } from "react-fullscreen-image";
 // import { width } from "@mui/system";
 
 // const images = [pic1, pic2, pic3, pic4];
