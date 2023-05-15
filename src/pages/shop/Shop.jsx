@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import useOnClickOutside from "hooks/useOnClickOutside";
 import mainImg from "assets/1.JPG";
@@ -110,6 +110,8 @@ const Toggle2 = React.forwardRef(
 );
 
 const Shop = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const navigate = useNavigate();
   const nodeRef = useRef();
   const nodeRef2 = useRef();
@@ -166,7 +168,13 @@ const Shop = () => {
             item.tags.includes(filter)
         )
       );
-    } else {
+    } else if (searchParams.get("category")) {
+      setFilteredData(
+        data.filter((item) =>
+          item?.category?.includes(searchParams.get("category"))
+        )
+      );
+    } else if (!filter && !filterCategory) {
       setFilteredData(data);
     }
   }, [filter, filterCategory]);
@@ -276,9 +284,12 @@ const Shop = () => {
             <Dropdown.Toggle
               as={Toggle2}
               visible={visible2}
-              selected={filterCategory}
+              selected={searchParams.get("category")}
               handelMouseDown={handelMouseDown2}
-              clear={() => setFilterCategory("")}
+              clear={() => {
+                setSearchParams({});
+                setFilterCategory("");
+              }}
             />
 
             <Dropdown.Menu
@@ -297,6 +308,7 @@ const Shop = () => {
                       onClick={() => {
                         setFilterCategory(item);
                         setVisible(false);
+                        setSearchParams({ category: item });
                       }}
                       style={{ color: "rgb(147 147 147)" }}
                     >
