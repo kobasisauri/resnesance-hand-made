@@ -11,7 +11,6 @@ import "swiper/css/navigation";
 // import ContactImage from "../../assets/contact-us.png";
 import { Autoplay, EffectFade, Pagination } from "swiper";
 import Logo from "assets/logo.png";
-// import WhiteLogo from "../../assets/whiteLogo.png";
 
 import pic0 from "assets/main.jpg";
 import pic1 from "assets/1.jpeg";
