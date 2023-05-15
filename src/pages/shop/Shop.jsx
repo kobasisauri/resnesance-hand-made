@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useCallback } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import useOnClickOutside from "hooks/useOnClickOutside";
-import mainImg from "assets/1.JPG";
+import mainImg from "assets/1.jpg";
 import styles from "./Shop.module.scss";
 import { data } from "data";
 
