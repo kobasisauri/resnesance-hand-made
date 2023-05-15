@@ -14,7 +14,7 @@ import Logo from "assets/logo.png";
 // import WhiteLogo from "../../assets/whiteLogo.png";
 
 import pic0 from "assets/main.jpg";
-import pic1 from "assets/1.jpg";
+import pic1 from "assets/1.jpeg";
 import pic2 from "assets/2.jpg";
 import pic3 from "assets/3.jpg";
 import pic4 from "assets/6.png";
@@ -28,7 +28,7 @@ import bar from "assets/shop/ARES/1.jpeg";
 import closet from "assets/shop/ARES_MIX/1.jpeg";
 import wineRoom from "assets/shop/HEX_R/1.jpeg";
 import library from "assets/shop/ASSIMETRIC_ART/1.jpeg";
-import movieTheatre from "assets/1.jpg";
+import movieTheatre from "assets/1.jpeg";
 import signature from "assets/shop/ASSIMETRIC_AW/1.jpeg";
 
 const items = [pic8, pic0, pic1, pic2, pic3, pic4, pic5];
