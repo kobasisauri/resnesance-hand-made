@@ -14,7 +14,7 @@ import Logo from "assets/logo.png";
 
 import pic0 from "assets/9.jpeg";
 import pic1 from "assets/1.jpeg";
-import pic2 from "assets/2.jpg";
+import pic2 from "assets/2.jpeg";
 import pic3 from "assets/3.jpg";
 import pic4 from "assets/6.png";
 import pic5 from "assets/5.jpg";
