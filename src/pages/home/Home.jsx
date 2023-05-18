@@ -126,10 +126,10 @@ const Home = () => {
                 <img src={kitchen} alt="category-pic" width="100%" />
               </Link>
               <h4>KITCHEN</h4>
-              <p>
+              {/* <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
-              </p>
+              </p> */}
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
@@ -138,10 +138,10 @@ const Home = () => {
               </Link>
 
               <h4>VANITY</h4>
-              <p>
+              {/* <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
-              </p>
+              </p> */}
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
@@ -150,10 +150,10 @@ const Home = () => {
               </Link>
 
               <h4>BAR</h4>
-              <p>
+              {/* <p>
                 Custom made seating and storage bench designs <br /> made from
                 live edge natural tree slabs.
-              </p>
+              </p> */}
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
@@ -162,10 +162,10 @@ const Home = () => {
               </Link>
 
               <h4>CLOSET</h4>
-              <p>
+              {/* <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
-              </p>
+              </p> */}
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
@@ -174,10 +174,10 @@ const Home = () => {
               </Link>
 
               <h4>WINE ROOM</h4>
-              <p>
+              {/* <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
-              </p>
+              </p> */}
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
@@ -189,10 +189,10 @@ const Home = () => {
               </Link>
 
               <h4>NIGHT STAND</h4>
-              <p>
+              {/* <p>
                 Custom made seating and storage bench designs <br /> made from
                 live edge natural tree slabs.
-              </p>
+              </p> */}
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
@@ -201,10 +201,10 @@ const Home = () => {
               </Link>
 
               <h4>LIBRARY</h4>
-              <p>
+              {/* <p>
                 View the entire collection of live edge natural wood slab
                 furniture and reclaimed wood furniture.
-              </p>
+              </p> */}
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
@@ -216,10 +216,10 @@ const Home = () => {
               </Link>
 
               <h4>MOVIE THEATRE</h4>
-              <p>
+              {/* <p>
                 Live edge dining tables. Pick your natural edge <br /> slab and
                 we custom fit a base to match your piece.
-              </p>
+              </p> */}
             </div>
 
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
@@ -228,10 +228,10 @@ const Home = () => {
               </Link>
 
               <h4>SIGNATURE</h4>
-              <p>
+              {/* <p>
                 Custom made seating and storage bench designs <br /> made from
                 live edge natural tree slabs.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
