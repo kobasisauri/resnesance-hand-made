@@ -493,7 +493,7 @@ export const data = [
   {
     id: "4",
     name: "ANG L KNOB",
-    category: ["night-stand", "movie-theatre"],
+    category: ["night-stand", "kitchen", "movie-theatre"],
     innerTitle:
       "Purpleheart Wenge Carbon Fiber Micarta Bubinga Stainless Steel",
     tags: [
@@ -511,7 +511,7 @@ export const data = [
   {
     id: "5",
     name: "ANG L MIX",
-    category: ["movie-theatre"],
+    category: ["movie-theatre", "kitchen", "vanity"],
     innerTitle: "White Purpleheart Wenge Micarta Stainless Steel",
     tags: ["mirror", "purpleheart", "satin", "stainless steel", "white"],
     description: "12 Inches",
@@ -532,7 +532,7 @@ export const data = [
   {
     id: "6",
     name: "ANG L R",
-    category: ["library", "movie-theatre"],
+    category: ["library", "kitchen", "movie-theatre", "vanity"],
     innerTitle: "Purpleheart",
     tags: ["mirror", "purpleheart"],
     description: "18 Inches",
@@ -552,7 +552,7 @@ export const data = [
   {
     id: "8",
     name: "ARES",
-    category: ["library", "kitchen", "bar"],
+    category: ["library", "bar"],
     innerTitle: "Micarta Brass",
     tags: ["brass", "micarta", "satin"],
     description: "12 Inches",
@@ -696,7 +696,7 @@ export const data = [
   {
     id: "20",
     name: "ASSIMETRIC AW",
-    category: ["signature", "kitchen"],
+    category: ["signature"],
     innerTitle: "",
     tags: ["mirror", "signature", "stainless steel", "wenge"],
     description: "12 Inches",
@@ -745,7 +745,7 @@ export const data = [
   {
     id: "24",
     name: "ASSIMETRIC WH",
-    category: ["closet", "movie-theatre"],
+    category: ["closet", "kitchen", "movie-theatre"],
     innerTitle: "White Stainless Steel",
     tags: ["mirror", "stainless steel", "White"],
     description: "12 Inches",
@@ -791,7 +791,7 @@ export const data = [
   {
     id: "28",
     name: "BLUES B",
-    category: ["closet", "kitchen", "movie-theatre"],
+    category: ["closet", "movie-theatre"],
     innerTitle: "Blues Stainless Steel Brass Bronze Nickel Aluminum",
     tags: [
       "aluminum",
@@ -844,7 +844,7 @@ export const data = [
   {
     id: "31",
     name: "GENT",
-    category: ["closet", "movie-theatre"],
+    category: ["closet", "kitchen", "movie-theatre", "vanity"],
     innerTitle: "Epoxy Stainless Steel",
     tags: ["epoxy", "stainless steel"],
     description: "10 Inches",
@@ -854,7 +854,7 @@ export const data = [
   {
     id: "32",
     name: "GROS",
-    category: ["movie-theatre"],
+    category: ["movie-theatre", "kitchen"],
     innerTitle: "Ipe Stainless Steel",
     tags: ["ipe", "mirror", "stainless steel"],
     description: "7 Inches",
@@ -912,7 +912,7 @@ export const data = [
   {
     id: "37",
     name: "LANGARD P",
-    category: ["kitchen", "movie-theatre"],
+    category: ["movie-theatre"],
     innerTitle: "Purpleheart Brass",
     tags: ["brass", "mirror", "purpleheart", "satin"],
     description: "12 Inches",
@@ -942,7 +942,7 @@ export const data = [
   {
     id: "40",
     name: "LV",
-    category: ["library", "kitchen", "movie-theatre", "bar"],
+    category: ["library", "movie-theatre", "bar"],
     innerTitle: "Brass Wenge",
     tags: ["brass", "lignum vitae", "mirror", "satin"],
     description: "12 Inches. Beautiful Lignum Vitae. Set of two",
@@ -998,7 +998,7 @@ export const data = [
   {
     id: "45",
     name: "QUAD S",
-    category: ["night-stand", "movie-theatre"],
+    category: ["night-stand", "kitchen", "movie-theatre", "vanity"],
     innerTitle: "Stainless Micarta",
     tags: ["micarta", "mirror", "stainless steel"],
     description: "",
@@ -1008,7 +1008,7 @@ export const data = [
   {
     id: "46",
     name: "QUAD WG",
-    category: ["movie-theatre"],
+    category: ["movie-theatre", "kitchen"],
     innerTitle: "White Gray Black",
     tags: [],
     description: "",
@@ -1110,7 +1110,7 @@ export const data = [
   {
     id: "54",
     name: "ROY",
-    category: ["bar"],
+    category: ["bar", "vanity"],
     innerTitle: "Aluminum Micarta Bubinga",
     tags: ["aluminum", "bubinga", "micarta", "mirror", "satin"],
     description: "",
@@ -1140,7 +1140,7 @@ export const data = [
   {
     id: "57",
     name: "U",
-    category: ["closet"],
+    category: ["closet", "vanity"],
     innerTitle: "White Purpleheart",
     tags: ["mirror", "purpleheart", "white"],
     description: "",
@@ -1171,7 +1171,7 @@ export const data = [
   {
     id: "59",
     name: "U R",
-    category: ["kitchen", "bar"],
+    category: ["bar"],
     innerTitle: "",
     tags: ["cocobolo", "damascus", "stainless steel"],
     description: "14 Inches. Beautiful Cocobolo",
@@ -1191,7 +1191,7 @@ export const data = [
   {
     id: "61",
     name: "VEGA 2",
-    category: ["library", "kitchen"],
+    category: ["library"],
     innerTitle: "Olive Wood",
     tags: ["olive wood", "satin", "stainless steel"],
     description: "10 Inches",
@@ -1368,7 +1368,7 @@ export const data = [
   {
     id: "74",
     name: "VINO R",
-    category: ["signature", "wine-room"],
+    category: ["signature"],
     innerTitle: "Cocobolo",
     tags: ["cocobolo", "satin", "stainless steel", "wine-room"],
     description: "32 Inches. Beautiful Cocobolo. Perfect for wine-room",
@@ -1388,7 +1388,7 @@ export const data = [
   {
     id: "76",
     name: "WEB",
-    category: ["closet", "kitchen", "movie-theatre", "bar"],
+    category: ["closet", "movie-theatre", "bar"],
     innerTitle: "",
     tags: ["aluminum", "black", "brass"],
     description: "Black. 10 Inches",

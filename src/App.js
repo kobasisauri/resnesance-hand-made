@@ -7,7 +7,7 @@ import { Home, AboutUs, ContactUs, Error, Shop, ShopItem } from "./pages";
 import styles from "./App.module.scss";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function App() {
   }, [pathname]);
 
   useEffect(() => {
-    setTheme(JSON.parse(localStorage.getItem("theme")) || "dark");
+    setTheme(JSON.parse(localStorage.getItem("theme")) || "light");
   }, []);
 
   const toggleTheme = () => {

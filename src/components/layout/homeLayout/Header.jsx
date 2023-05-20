@@ -110,13 +110,13 @@ function Header({ toggleTheme }) {
           </div>
         ))}
 
-        <div className="ms-3">
+        {/* <div className="ms-3">
           <FormControlLabel
             control={
               <IOSSwitch sx={{ m: 1 }} defaultChecked onChange={toggleTheme} />
             }
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

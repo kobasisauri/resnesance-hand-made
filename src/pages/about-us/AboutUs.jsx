@@ -40,7 +40,7 @@ const AboutUs = () => {
             challenging, but we like it.
             <br />
             <br />
-            Our goal is to get hi end product.
+            Our goal is to get high end product.
             <br />
             <br />
             We have already created quite broad range of different designs and
