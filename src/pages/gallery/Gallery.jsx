@@ -18,14 +18,13 @@ const Gallery = () => {
   const [images, setImages] = useState([]);
   // const [activeImage, setActiveImage] = useState();
   const [modalOpen, setModalOpen] = useState(false);
-  const [firstSwiper, setFirstSwiper] = useState(null);
 
   useEffect(() => {
     setImages(GalleryImages);
   }, []);
 
   useEffect(() => {
-    sliderRef?.current?.swiper.slideTo(myIndex - 1);
+    sliderRef?.current?.swiper.slideTo(myIndex);
   }, [myIndex]);
 
   return (
