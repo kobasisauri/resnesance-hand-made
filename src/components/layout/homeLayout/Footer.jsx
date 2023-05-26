@@ -19,7 +19,11 @@ function Footer() {
 
         <ul>
           <li>
-            <a href=".">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/renaissancehandmade/?igshid=MmIzYWVlNDQ5Yg%3D%3D&fbclid=IwAR03iL1pnWQCrk7b3pxGjmoLGVTxcFV9woDpj4ZQpjNRIB8Xs8hDMKDkneo"
+            >
               <img src={insta} alt="insta" />
             </a>
           </li>
