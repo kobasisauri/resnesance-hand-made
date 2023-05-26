@@ -133,30 +133,6 @@
   }
 }
 
-@media only screen and (min-width: 800px) {
-  .logo-container {
-    margin-right: 2rem;
-    margin-bottom: 0;
-  }
-
-  .section2 {
-    display: flex;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .section4 {
-    margin-bottom: 5rem;
-
-    .wrapper {
-      .contact-image {
-        display: block;
-      }
-    }
-  }
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -225,7 +201,7 @@
         padding: 0 1rem;
         color: rgb(121, 121, 122);
         // font-style: italic;
-        text-align: center;
+        text-align: start;
         font-size: 16px;
         letter-spacing: normal;
         line-height: normal;
@@ -274,4 +250,40 @@ h1 {
   color: rgb(121, 121, 122) !important;
   font-size: 37px;
   line-height: 1.2em;
+}
+
+@media only screen and (min-width: 550px) {
+  .section5 {
+    .wrapper5 {
+      .innerWrapper {
+        .text5 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .logo-container {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .section2 {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section4 {
+    margin-bottom: 5rem;
+
+    .wrapper {
+      .contact-image {
+        display: block;
+      }
+    }
+  }
 }
