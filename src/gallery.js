@@ -41,7 +41,7 @@ import Img40 from "assets/gallery/40.jpg";
 import Img41 from "assets/gallery/41.jpg";
 import Img42 from "assets/gallery/42.jpg";
 import Img43 from "assets/gallery/43.jpg";
-// import Img44 from "assets/gallery/44.jpg";
+import Img44 from "assets/shop/LANGARD_P/1.jpeg";
 import Img45 from "assets/gallery/45.jpg";
 import Img46 from "assets/gallery/46.jpg";
 import Img47 from "assets/gallery/47.jpg";
@@ -144,6 +144,7 @@ import Img143 from "assets/gallery/143.jpg";
 import Img144 from "assets/gallery/144.jpg";
 
 export const GalleryImages = [
+  Img44,
   Img1,
   Img2,
   Img3,
