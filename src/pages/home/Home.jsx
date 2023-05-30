@@ -22,8 +22,8 @@ import pic8 from "assets/8.jpg";
 import styles from "./Home.module.scss";
 
 import knobs from "assets/shop/LOOP/1.jpeg";
-import pulls from "assets/shop/ARES_MIX/1.jpeg";
-import bigHandles from "assets/shop/HEX_R/1.jpeg";
+import pulls from "assets/shop/LANGARD_P/1.jpeg";
+import bigHandles from "assets/shop/HEX_R/4.jpeg";
 import kitchen from "assets/shop/QUAD_WG/1.jpeg";
 import vanity from "assets/shop/ANG_L_KNOB/1.jpeg";
 import bar from "assets/shop/ARES/1.jpeg";
