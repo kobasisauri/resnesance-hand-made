@@ -21,6 +21,9 @@ import pic5 from "assets/5.jpeg";
 import pic8 from "assets/8.jpg";
 import styles from "./Home.module.scss";
 
+import knobs from "assets/shop/LOOP/1.jpeg";
+import pulls from "assets/shop/ARES_MIX/1.jpeg";
+import bigHandles from "assets/shop/HEX_R/1.jpeg";
 import kitchen from "assets/shop/QUAD_WG/1.jpeg";
 import vanity from "assets/shop/ANG_L_KNOB/1.jpeg";
 import bar from "assets/shop/ARES/1.jpeg";
@@ -122,6 +125,39 @@ const Home = () => {
 
           <div className={`row`} style={{ marginTop: "5rem" }}>
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
+              <Link to="/shop?category=knobs" style={{ cursor: "pointer" }}>
+                <img src={knobs} alt="category-pic" width="100%" />
+              </Link>
+              <h4>KNOBS</h4>
+              {/* <p>
+                View the entire collection of live edge natural wood slab
+                furniture and reclaimed wood furniture.
+              </p> */}
+            </div>{" "}
+            <div className={`${styles.item} col-md-6 col-lg-4 `}>
+              <Link to="/shop?category=pulls" style={{ cursor: "pointer" }}>
+                <img src={pulls} alt="category-pic" width="100%" />
+              </Link>
+              <h4>PULLS</h4>
+              {/* <p>
+                View the entire collection of live edge natural wood slab
+                furniture and reclaimed wood furniture.
+              </p> */}
+            </div>{" "}
+            <div className={`${styles.item} col-md-6 col-lg-4 `}>
+              <Link
+                to="/shop?category=big-handles"
+                style={{ cursor: "pointer" }}
+              >
+                <img src={bigHandles} alt="category-pic" width="100%" />
+              </Link>
+              <h4>BIG HANDLES</h4>
+              {/* <p>
+                View the entire collection of live edge natural wood slab
+                furniture and reclaimed wood furniture.
+              </p> */}
+            </div>
+            <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link to="/shop?category=kitchen" style={{ cursor: "pointer" }}>
                 <img src={kitchen} alt="category-pic" width="100%" />
               </Link>
@@ -131,7 +167,6 @@ const Home = () => {
                 furniture and reclaimed wood furniture.
               </p> */}
             </div>
-
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link to="/shop?category=vanity" style={{ cursor: "pointer" }}>
                 <img src={vanity} alt="category-pic" width="100%" />
@@ -143,7 +178,6 @@ const Home = () => {
                 we custom fit a base to match your piece.
               </p> */}
             </div>
-
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link to="/shop?category=bar" style={{ cursor: "pointer" }}>
                 <img src={bar} alt="category-pic" width="100%" />
@@ -155,7 +189,6 @@ const Home = () => {
                 live edge natural tree slabs.
               </p> */}
             </div>
-
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link to="/shop?category=closet" style={{ cursor: "pointer" }}>
                 <img src={closet} alt="category-pic" width="100%" />
@@ -167,7 +200,6 @@ const Home = () => {
                 furniture and reclaimed wood furniture.
               </p> */}
             </div>
-
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link to="/shop?category=wine-room" style={{ cursor: "pointer" }}>
                 <img src={wineRoom} alt="category-pic" width="100%" />
@@ -179,7 +211,6 @@ const Home = () => {
                 we custom fit a base to match your piece.
               </p> */}
             </div>
-
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link
                 to="/shop?category=night-stand"
@@ -194,7 +225,6 @@ const Home = () => {
                 live edge natural tree slabs.
               </p> */}
             </div>
-
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link to="/shop?category=library" style={{ cursor: "pointer" }}>
                 <img src={library} alt="category-pic" width="100%" />
@@ -206,7 +236,6 @@ const Home = () => {
                 furniture and reclaimed wood furniture.
               </p> */}
             </div>
-
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link
                 to="/shop?category=movie-theatre"
@@ -221,7 +250,6 @@ const Home = () => {
                 we custom fit a base to match your piece.
               </p> */}
             </div>
-
             <div className={`${styles.item} col-md-6 col-lg-4 `}>
               <Link to="/shop?category=signature" style={{ cursor: "pointer" }}>
                 <img src={signature} alt="category-pic" width="100%" />
