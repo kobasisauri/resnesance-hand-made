@@ -48,7 +48,7 @@ const ContactUs = () => {
     formData.append("email", data.email);
     formData.append("message", data.message);
 
-    fetch("https://rennaisance-backend.vercel.app/", {
+    fetch("https://rennaisance-backend.herokuapp.com/", {
       method: "POST",
       body: formData,
     })
