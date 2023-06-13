@@ -41,8 +41,6 @@ const ContactUs = () => {
   };
 
   const handleSubmit = (values) => {
-    values.preventDefault();
-
     let formData = new FormData();
     formData.append("name", data.name);
     formData.append("email", data.email);
@@ -52,7 +50,7 @@ const ContactUs = () => {
       method: "POST",
       body: formData,
     })
-      .then((res) => console.log(res))
+      .then((res) => console.log("Mail Sent"))
       .then((message) => {
         // console.log(1);
       });
