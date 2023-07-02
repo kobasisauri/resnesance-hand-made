@@ -57,9 +57,9 @@ const AboutUs = () => {
             <br />
             <br />
             We use broad range of materials, including as stainless steel,
-            Damascus steel, brass, bronze, nickel, aluminum, copper, beautiful
-            and precious exotic sorts of hardwood, carbon fiber, acrylic
-            polymers, leather, constantly experimenting with new ideas.
+            Damascus steel, brass, bronze, nickel, aluminum, copper, silver,
+            beautiful and precious exotic sorts of hardwood, carbon fiber,
+            acrylic polymers, leather, constantly experimenting with new ideas.
           </p>
         </div>
         {/* <div>

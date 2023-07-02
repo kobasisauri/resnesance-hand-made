@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useState } from "react";
 // import { TextField } from "@mui/material";
 // import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
@@ -11,6 +12,7 @@ import "swiper/css/navigation";
 // import ContactImage from "../../assets/contact-us.png";
 import { Autoplay, EffectFade, Pagination } from "swiper";
 import Logo from "assets/logo.png";
+import HandMade from "assets/handmade.jpg";
 
 import pic0 from "assets/9.jpeg";
 import pic1 from "assets/1.jpeg";
@@ -33,9 +35,35 @@ import library from "assets/shop/ASSIMETRIC_ART/1.jpeg";
 import movieTheatre from "assets/1.jpeg";
 import signature from "assets/shop/ASSIMETRIC_AW/1.jpeg";
 
-const items = [pic8, pic0, pic1, pic2, pic3, pic4, pic5];
-
 const Home = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const [smallImage, setSmallImage] = useState(false);
+  const items = [
+    smallImage ? HandMade : pic8,
+
+    pic0,
+    pic1,
+    pic2,
+    pic3,
+    pic4,
+    pic5,
+  ];
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
+  useEffect(() => {
+    if (width < 1000) {
+      setSmallImage(true);
+    } else {
+      setSmallImage(false);
+    }
+  }, [width]);
+
   return (
     <div className={styles["home-wrapper"]}>
       <Swiper
@@ -117,9 +145,10 @@ const Home = () => {
               <br />
               <br />
               We use broad range of materials, including as stainless steel,
-              Damascus steel, brass, bronze, nickel, aluminum, copper, beautiful
-              and precious exotic sorts of hardwood, carbon fiber, acrylic
-              polymers, leather, constantly experimenting with new ideas.
+              Damascus steel, brass, bronze, nickel, aluminum, copper, silver,
+              beautiful and precious exotic sorts of hardwood, carbon fiber,
+              acrylic polymers, leather, constantly experimenting with new
+              ideas.
             </div>
           </div>
 
