@@ -40,7 +40,8 @@ const ContactUs = () => {
     },
   };
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (e) => {
+    // e.preventdefault();
     let formData = new FormData();
     formData.append("name", data.name);
     formData.append("email", data.email);
@@ -49,21 +50,23 @@ const ContactUs = () => {
     fetch("https://rennaisance-backend.herokuapp.com/", {
       method: "POST",
       body: formData,
-    })
-      .then((res) => console.log("Mail Sent"))
-      .then((message) => {
-        // console.log(1);
-      });
-  };
-
-  const handleChange = (e) => {
-    setData({
-      ...data,
-
-      // Trimming any whitespace
-      [e.target.name]: e.target.value.trim(),
+    }).then((res) => {
+      if (res.ok) {
+        // shhow notification
+        setData(initialFormData);
+      } else {
+        // show error text
+        console.log(res.statusText);
+      }
     });
   };
+
+  // const handleChange = (e) => {
+  //   setData({
+  //     ...data,
+  //     [e.target.name]: e.target.value.trim(),
+  //   });
+  // };
 
   return (
     <div className={styles.container}>
@@ -82,15 +85,17 @@ const ContactUs = () => {
         </div>
 
         <div className={styles["inner-wrapper"]}>
-          <form onSubmit={handleSubmit} className={styles.form}>
+          <form className={styles.form}>
             <TextField
               id="outlined-basic"
               label="Name*"
               variant="outlined"
               sx={inputStyle}
               name="name"
-              // value={data.name}
-              onChange={handleChange}
+              value={data.name}
+              onInput={(e) =>
+                setData((state) => ({ ...state, name: e.target.value }))
+              }
             />
 
             <TextField
@@ -99,8 +104,10 @@ const ContactUs = () => {
               variant="outlined"
               sx={inputStyle}
               name="email"
-              // value={data.email}
-              onChange={handleChange}
+              value={data.email}
+              onInput={(e) =>
+                setData((state) => ({ ...state, email: e.target.value }))
+              }
             />
 
             <TextField
@@ -110,12 +117,19 @@ const ContactUs = () => {
               multiline
               rows={3}
               sx={inputStyle}
-              // value={data.message}
-              onChange={handleChange}
+              value={data.message}
+              onInput={(e) =>
+                setData((state) => ({ ...state, message: e.target.value }))
+              }
             />
 
             <div className={styles["button-wrrapper"]}>
-              <Button type="submit" variant="outlined" sx={{ width: "250px" }}>
+              <Button
+                type="button"
+                onClick={handleSubmit}
+                variant="outlined"
+                sx={{ width: "250px" }}
+              >
                 Submit
               </Button>
             </div>
