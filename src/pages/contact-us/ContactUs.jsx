@@ -19,7 +19,7 @@ const ContactUs = () => {
   const [data, setData] = useState(initialFormData);
   const [theme, setTheme] = useState("#181717");
   const [showNotification, setShowNotification] = useState({
-    open: true,
+    open: false,
     message: "",
     severity: "success",
   });
