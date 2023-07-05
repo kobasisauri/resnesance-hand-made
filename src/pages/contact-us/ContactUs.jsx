@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { TextField } from "@mui/material";
-
+import { Snackbar, TextField } from "@mui/material";
+import MuiAlert from "@mui/material/Alert";
 import Button from "@mui/material/Button";
 import styles from "./ContactUs.module.scss";
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const initialFormData = Object.freeze({
   name: "",
@@ -14,6 +18,11 @@ const ContactUs = () => {
   let color = JSON.parse(localStorage.getItem("theme"));
   const [data, setData] = useState(initialFormData);
   const [theme, setTheme] = useState("#181717");
+  const [showNotification, setShowNotification] = useState({
+    open: true,
+    message: "",
+    severity: "success",
+  });
 
   useEffect(() => {
     if (color === "light") {
@@ -52,12 +61,28 @@ const ContactUs = () => {
       body: formData,
     }).then((res) => {
       if (res.ok) {
-        // shhow notification
+        setShowNotification({
+          open: true,
+          message: "Message sent successfully!",
+          severity: "success",
+        });
+
         setData(initialFormData);
       } else {
-        // show error text
-        console.log(res.statusText);
+        setShowNotification({
+          open: true,
+          message: "Message wasn't sent!",
+          severity: "error",
+        });
       }
+
+      setTimeout(() => {
+        setShowNotification({
+          open: false,
+          message: "",
+          severity: "success",
+        });
+      }, "3000");
     });
   };
 
@@ -69,74 +94,86 @@ const ContactUs = () => {
   // };
 
   return (
-    <div className={styles.container}>
-      <h2>CONTACT US</h2>
-      <div className={styles.wrapper}>
-        <div className={styles["inner-wrapper"]}>
-          <div className={styles.items}>
-            <h5>E-MAIL</h5>
-            <p>contact@renaissancehandmade.com</p>
-          </div>
-
-          <div className={styles.items}>
-            <h5>RENAISSANCE HANDMADE LLC</h5>
-            <p>New York</p>
-          </div>
-        </div>
-
-        <div className={styles["inner-wrapper"]}>
-          <form className={styles.form}>
-            <TextField
-              id="outlined-basic"
-              label="Name*"
-              variant="outlined"
-              sx={inputStyle}
-              name="name"
-              value={data.name}
-              onInput={(e) =>
-                setData((state) => ({ ...state, name: e.target.value }))
-              }
-            />
-
-            <TextField
-              id="outlined-basic"
-              label="E-Mail*"
-              variant="outlined"
-              sx={inputStyle}
-              name="email"
-              value={data.email}
-              onInput={(e) =>
-                setData((state) => ({ ...state, email: e.target.value }))
-              }
-            />
-
-            <TextField
-              id="outlined-multiline-static"
-              name="message"
-              label="Message*"
-              multiline
-              rows={3}
-              sx={inputStyle}
-              value={data.message}
-              onInput={(e) =>
-                setData((state) => ({ ...state, message: e.target.value }))
-              }
-            />
-
-            <div className={styles["button-wrrapper"]}>
-              <Button
-                type="button"
-                onClick={handleSubmit}
-                variant="outlined"
-                sx={{ width: "250px" }}
-              >
-                Submit
-              </Button>
+    <>
+      <div className={styles.container}>
+        <h2>CONTACT US</h2>
+        <div className={styles.wrapper}>
+          <div className={styles["inner-wrapper"]}>
+            <div className={styles.items}>
+              <h5>E-MAIL</h5>
+              <p>contact@renaissancehandmade.com</p>
             </div>
-          </form>
+
+            <div className={styles.items}>
+              <h5>RENAISSANCE HANDMADE LLC</h5>
+              <p>New York</p>
+            </div>
+          </div>
+
+          <div className={styles["inner-wrapper"]}>
+            <form className={styles.form}>
+              <TextField
+                id="outlined-basic"
+                label="Name*"
+                variant="outlined"
+                sx={inputStyle}
+                name="name"
+                value={data.name}
+                onInput={(e) =>
+                  setData((state) => ({ ...state, name: e.target.value }))
+                }
+              />
+
+              <TextField
+                id="outlined-basic"
+                label="E-Mail*"
+                variant="outlined"
+                sx={inputStyle}
+                name="email"
+                value={data.email}
+                onInput={(e) =>
+                  setData((state) => ({ ...state, email: e.target.value }))
+                }
+              />
+
+              <TextField
+                id="outlined-multiline-static"
+                name="message"
+                label="Message*"
+                multiline
+                rows={3}
+                sx={inputStyle}
+                value={data.message}
+                onInput={(e) =>
+                  setData((state) => ({ ...state, message: e.target.value }))
+                }
+              />
+
+              <div className={styles["button-wrrapper"]}>
+                <Button
+                  type="button"
+                  onClick={handleSubmit}
+                  variant="outlined"
+                  sx={{ width: "250px" }}
+                >
+                  Submit
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+
+      <Snackbar
+        open={showNotification.open}
+        message="test"
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        <Alert severity={showNotification.severity} sx={{ width: "100%" }}>
+          {showNotification.message}
+        </Alert>
+      </Snackbar>
+    </>
   );
 };
 
