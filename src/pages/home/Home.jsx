@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import { Autoplay, EffectFade, Pagination } from "swiper";
 import Logo from "assets/logo.png";
 import HandMade from "assets/handmade.jpg";
+import Test from "assets/1.png";
 
 import pic0 from "assets/9.jpeg";
 import pic1 from "assets/1.jpeg";
@@ -39,8 +40,7 @@ const Home = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [smallImage, setSmallImage] = useState(false);
   const items = [
-    smallImage ? HandMade : pic8,
-
+    smallImage ? HandMade : Test,
     pic0,
     pic1,
     pic2,
