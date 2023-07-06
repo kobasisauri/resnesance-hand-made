@@ -1,5 +1,6 @@
 .top {
   height: 284px;
+
   .inner-top {
     position: relative;
     height: 100%;
@@ -54,7 +55,7 @@
   display: flex;
   background-color: rgb(40, 40, 40);
   height: 44px;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   z-index: 9;
 

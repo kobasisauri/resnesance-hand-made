@@ -21,7 +21,7 @@ import pic2 from "assets/2.jpeg";
 import pic3 from "assets/3.jpeg";
 import pic4 from "assets/6.png";
 import pic5 from "assets/5.jpeg";
-import pic8 from "assets/8.jpg";
+// import pic8 from "assets/8.jpg";
 import styles from "./Home.module.scss";
 
 import knobs from "assets/shop/LOOP/1.jpeg";
@@ -40,7 +40,7 @@ const Home = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [smallImage, setSmallImage] = useState(false);
   const items = [
-    smallImage ? HandMade : Test,
+    // smallImage ? HandMade : Test,
     pic0,
     pic1,
     pic2,
@@ -66,6 +66,15 @@ const Home = () => {
 
   return (
     <div className={styles["home-wrapper"]}>
+      <img src={smallImage ? HandMade : Test} alt="main" />
+      <div
+        style={{
+          height: "32px",
+          width: "100%",
+          backgroundColor: "rgb(40,40,40)",
+        }}
+      />
+
       <Swiper
         loop={true}
         spaceBetween={10}
