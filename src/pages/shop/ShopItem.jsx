@@ -52,8 +52,8 @@ function ShopItem() {
               zoom={true}
               style={{
                 // height: "32rem",
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
+                "--swiper-navigation-color": "#000",
+                "--swiper-pagination-color": "#000",
                 margin: "2rem 0",
               }}
               loop={true}
@@ -71,7 +71,12 @@ function ShopItem() {
                   onClick={() => setModalOpen(true)}
                   style={{ cursor: "pointer" }}
                 >
-                  <img src={item} alt="slide_image" id="myvideo" />
+                  <img
+                    src={item}
+                    alt="slide_image"
+                    id="myvideo"
+                    style={{ objectFit: "contain" }}
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -99,7 +104,11 @@ function ShopItem() {
             >
               {images.map((item, i) => (
                 <SwiperSlide key={i}>
-                  <img src={item} alt="slide_image" />
+                  <img
+                    src={item}
+                    alt="slide_image"
+                    style={{ objectFit: "contain" }}
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
