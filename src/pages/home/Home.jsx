@@ -66,7 +66,11 @@ const Home = () => {
 
   return (
     <div className={styles["home-wrapper"]}>
-      <img src={smallImage ? HandMade : Test} alt="main" />
+      <img
+        src={smallImage ? HandMade : Test}
+        alt="main"
+        style={{ height: "40rem", width: "100%" }}
+      />
       <div
         style={{
           height: "32px",
