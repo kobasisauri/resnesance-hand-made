@@ -43,9 +43,9 @@
     top: 15px;
     color: white;
   }
+
   &:nth-child(2) div:nth-child(2) {
     color: white;
-
     top: 15px;
   }
 }
@@ -82,4 +82,5 @@
   // margin-left: auto;
   // margin-right: auto;
   margin: auto;
+  position: absolute;
 }

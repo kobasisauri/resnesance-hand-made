@@ -13,6 +13,7 @@ import styles from "./ShopItem.module.scss";
 import { Zoom, FreeMode, Navigation, Thumbs } from "swiper";
 
 function ShopItem() {
+  const sliderRef = useRef();
   const ref = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const params = useLocation();
@@ -42,6 +43,18 @@ function ShopItem() {
   //   //   imageRef.current.style.height = "480px";
   //   // }
   // };
+
+  useEffect(() => {
+    sliderRef?.current?.swiper.on("zoomChange", (_, scale) => {
+      if (scale > 1) {
+        sliderRef.current.swiper.allowSlideNext = false;
+        sliderRef.current.swiper.allowSlidePrev = false;
+      } else {
+        sliderRef.current.swiper.allowSlideNext = true;
+        sliderRef.current.swiper.allowSlidePrev = true;
+      }
+    });
+  }, []);
 
   return (
     <div className={styles["home-wrapper"]}>
@@ -163,10 +176,11 @@ function ShopItem() {
 
         {images?.length && (
           <Swiper
+            ref={sliderRef}
             zoom={true}
             style={{
-              height: "50rem",
-              width: "90%",
+              // height: "50rem",
+              // width: "90%",
               "--swiper-navigation-color": "#fff",
               "--swiper-pagination-color": "#fff",
             }}
@@ -182,16 +196,21 @@ function ShopItem() {
           >
             {images?.length &&
               images.map((item, i) => (
-                <SwiperSlide key={i} style={{ height: "100%" }}>
-                  <img
-                    src={item}
-                    alt="slide_image"
-                    className={styles["modal-images"]}
-                    style={{
-                      maxHeight: "100%",
-                      maxWidth: "100%",
-                    }}
-                  />
+                <SwiperSlide
+                  key={i}
+                  // style={{ height: "100%" }}
+                >
+                  <div className="swiper-zoom-container position-relative">
+                    <img
+                      src={item}
+                      alt="slide_image"
+                      className={styles["modal-images"]}
+                      style={{
+                        maxHeight: "100%",
+                        maxWidth: "100%",
+                      }}
+                    />
+                  </div>
                 </SwiperSlide>
               ))}
           </Swiper>

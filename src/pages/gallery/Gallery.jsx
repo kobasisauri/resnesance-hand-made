@@ -16,7 +16,6 @@ const Gallery = () => {
   const sliderRef = useRef();
   const [myIndex, setMyIndex] = useState(0);
   const [images, setImages] = useState([]);
-  // const [activeImage, setActiveImage] = useState();
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
@@ -26,6 +25,18 @@ const Gallery = () => {
   useEffect(() => {
     sliderRef?.current?.swiper.slideTo(myIndex);
   }, [myIndex]);
+
+  useEffect(() => {
+    sliderRef?.current?.swiper.on("zoomChange", (_, scale) => {
+      if (scale > 1) {
+        sliderRef.current.swiper.allowSlideNext = false;
+        sliderRef.current.swiper.allowSlidePrev = false;
+      } else {
+        sliderRef.current.swiper.allowSlideNext = true;
+        sliderRef.current.swiper.allowSlidePrev = true;
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -79,8 +90,8 @@ const Gallery = () => {
               ref={sliderRef}
               zoom={true}
               style={{
-                height: "50rem",
-                width: "90%",
+                // height: "50rem",
+                // width: "90%",
                 "--swiper-navigation-color": "#fff",
                 "--swiper-pagination-color": "#fff",
               }}
@@ -94,16 +105,21 @@ const Gallery = () => {
             >
               {images?.length &&
                 images.map((item, i) => (
-                  <SwiperSlide key={i} style={{ height: "100%" }}>
-                    <img
-                      src={item}
-                      alt="slide_image"
-                      className={styles["modal-images"]}
-                      style={{
-                        maxHeight: "100%",
-                        maxWidth: "100%",
-                      }}
-                    />
+                  <SwiperSlide
+                    key={i}
+                    // style={{ height: "100%" }}
+                  >
+                    <div className="swiper-zoom-container position-relative">
+                      <img
+                        src={item}
+                        alt="slide_image"
+                        className={styles["modal-images"]}
+                        style={{
+                          maxHeight: "100%",
+                          maxWidth: "100%",
+                        }}
+                      />
+                    </div>
                   </SwiperSlide>
                 ))}
             </Swiper>
