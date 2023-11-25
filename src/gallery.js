@@ -142,8 +142,74 @@ import Img141 from "assets/gallery/141.jpg";
 import Img142 from "assets/gallery/142.jpg";
 import Img143 from "assets/gallery/143.jpg";
 import Img144 from "assets/gallery/144.jpg";
+import Img145 from "assets/gallery/145.jpg";
+import Img146 from "assets/gallery/146.jpg";
+import Img147 from "assets/gallery/147.jpg";
+import Img148 from "assets/gallery/148.jpg";
+import Img149 from "assets/gallery/149.jpg";
+import Img150 from "assets/gallery/150.jpg";
+import Img151 from "assets/gallery/151.jpg";
+import Img152 from "assets/gallery/152.jpg";
+import Img153 from "assets/gallery/153.jpg";
+import Img154 from "assets/gallery/154.jpg";
+import Img155 from "assets/gallery/155.jpg";
+import Img156 from "assets/gallery/156.jpg";
+import Img157 from "assets/gallery/157.jpg";
+import Img158 from "assets/gallery/158.jpg";
+import Img159 from "assets/gallery/159.jpg";
+import Img160 from "assets/gallery/160.jpg";
+import Img161 from "assets/gallery/161.jpg";
+import Img162 from "assets/gallery/162.jpg";
+import Img163 from "assets/gallery/163.jpg";
+import Img164 from "assets/gallery/164.jpg";
+import Img165 from "assets/gallery/165.jpg";
+import Img166 from "assets/gallery/166.jpg";
+import Img167 from "assets/gallery/167.jpg";
+import Img168 from "assets/gallery/168.jpg";
+import Img169 from "assets/gallery/169.jpg";
+import Img170 from "assets/gallery/170.jpg";
+import Img171 from "assets/gallery/171.jpg";
+import Img172 from "assets/gallery/172.jpg";
+import Img173 from "assets/gallery/173.jpg";
+import Img174 from "assets/gallery/174.jpg";
+import Img175 from "assets/gallery/175.jpg";
+import Img176 from "assets/gallery/176.jpg";
+import Img177 from "assets/gallery/177.jpg";
 
 export const GalleryImages = [
+  Img145,
+  Img146,
+  Img147,
+  Img148,
+  Img149,
+  Img150,
+  Img151,
+  Img152,
+  Img153,
+  Img154,
+  Img155,
+  Img156,
+  Img157,
+  Img158,
+  Img159,
+  Img160,
+  Img161,
+  Img162,
+  Img163,
+  Img164,
+  Img165,
+  Img166,
+  Img167,
+  Img168,
+  Img169,
+  Img170,
+  Img171,
+  Img172,
+  Img173,
+  Img174,
+  Img175,
+  Img176,
+  Img177,
   Img44,
   Img1,
   Img2,
