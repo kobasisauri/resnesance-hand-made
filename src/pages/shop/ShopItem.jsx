@@ -148,9 +148,9 @@ function ShopItem() {
 
               <p> Materials: {data?.innerTitle}</p>
 
-              <p>
+              {/* <p>
                 Price: <span>{data?.price}$</span>
-              </p>
+              </p> */}
             </div>
             <Link to="../shop">Back to shop</Link>
           </div>

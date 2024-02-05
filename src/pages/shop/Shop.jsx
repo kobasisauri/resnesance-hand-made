@@ -345,7 +345,7 @@ const Shop = () => {
                 <div className={styles["item-body"]}>
                   <div className={styles["item-title"]}>
                     {item.name}
-                    <span>{item.price ? `${item.price}$` : ""}</span>
+                    {/* <span>{item.price ? `${item.price}$` : ""}</span> */}
                   </div>
                   <div className={styles["item-description"]}>
                     {item.tags.join(", ")}
