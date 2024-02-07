@@ -177,20 +177,6 @@ import Img176 from "assets/gallery/176.jpg";
 import Img177 from "assets/gallery/177.jpg";
 
 export const GalleryImages = [
-  Img150,
-
-  Img153,
-  Img154,
-  Img155,
-  Img157,
-  Img160,
-  Img161,
-  Img165,
-  Img166,
-  Img167,
-  Img168,
-  Img170,
-  Img172,
   Img44,
   Img1,
   Img2,
@@ -356,4 +342,18 @@ export const GalleryImages = [
   Img171,
   Img169,
   Img158,
+  Img150,
+
+  Img153,
+  Img154,
+  Img155,
+  Img157,
+  Img160,
+  Img161,
+  Img165,
+  Img166,
+  Img167,
+  Img168,
+  Img170,
+  Img172,
 ];
